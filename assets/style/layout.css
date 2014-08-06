@@ -1,0 +1,135 @@
+/*  ==========================================================================
+    STYLE: HASH TOWERS
+    --------------------------------------------------------------------------
+    Version: 1.0;
+    --------------------------------------------------------------------------
+    by Rafael Torres
+    ==========================================================================
+*/
+/*  --------------------------------------------------------------------------
+    SASS includes
+    ==========================================================================
+*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-size: 100%;
+  font-family: inherit;
+  vertical-align: baseline;
+}
+
+/*  ==========================================================================
+    Hash Towers: UI SETTINGS
+    --------------------------------------------------------------------------
+    Version: 1.0;
+    ==========================================================================
+*/
+/* Mixin
+----------------------------------------------------------------------- */
+/*  ==========================================================================
+    Hash Towers: UI SETTINGS
+    --------------------------------------------------------------------------
+    Version: 1.0;
+    ==========================================================================
+*/
+/* Animations
+----------------------------------------------------------------------- */
+/*  --------------------------------------------------------------------------
+    UI: Setup
+    --------------------------------------------------------------------------
+*/
+/*  ==========================================================================
+    Hash Towers: UI SETTINGS
+    --------------------------------------------------------------------------
+    Version: 1.0;
+    ==========================================================================
+*/
+/* Settings
+----------------------------------------------------------------------- */
+#FLOAT-LEFT {
+  float: left;
+}
+
+#FLOAT-RIGHT {
+  float: right;
+}
+
+#HIDE {
+  display: none;
+}
+
+#SHOW {
+  display: block;
+}
+
+#FONT-BOLD {
+  font-weight: bold;
+}
+
+#FONT-ITALIC {
+  font-style: italic;
+}
+
+#FONT-NORMAL {
+  font-weight: normal;
+}
+
+#FONT-LIGHTER {
+  font-weight: lighter;
+}
+
+#TEXT-UPPERCASE {
+  text-transform: uppercase;
+}
+
+#NO-TEXT-DECORATION {
+  text-decoration: none;
+}
+
+#TEXT-INDENT {
+  text-indent: -9999px;
+}
+
+#TEXT-CENTER {
+  text-align: center;
+}
+
+#POSITION-ABSOLUTE {
+  position: absolute;
+}
+
+#POSITION-RELATIVE {
+  position: relative;
+}
+
+#POSITION-FIXED {
+  position: fixed;
+}
+
+#OVERFLOW-HIDDEN {
+  overflow: hidden;
+}
+
+#OVERFLOW-AUTO {
+  overflow: auto;
+}
+
+#NO-LIST-STYLE {
+  list-style: none;
+}
+
+#NO-PADDING {
+  padding: 0;
+}
+
+/*  --------------------------------------------------------------------------
+    SASS Default
+    ==========================================================================
+*/
+html {
+  height: 100%;
+}

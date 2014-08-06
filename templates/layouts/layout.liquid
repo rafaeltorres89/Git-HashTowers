@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" ng-app>
+<head>
+    {% include "metatags" %}
+
+    <title>Hash Towers{% block title %}{% endblock %}</title>
+    <link rel="shortcut icon" type="image/ico" href="/favicon.ico" />
+
+    <!-- STYLES -->
+    {% include "styles" %}
+    {% block styles %}{% endblock %}
+</head>
+
+<body>
+    {% block content %}{% endblock %}
+
+    <!-- SCRIPTS -->
+    {% include "scripts" %}
+    {% block scripts %}{% endblock %}
+    {% include "analytics" %}
+</body>
+</html>

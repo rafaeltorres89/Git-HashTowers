@@ -1,0 +1,30 @@
+
+/*  ==========================================================================
+    Hash Towers: UI SETTINGS
+    --------------------------------------------------------------------------
+    Version: 1.0;
+    ==========================================================================
+*/
+
+    /* Mixin
+    ----------------------------------------------------------------------- */
+
+    //Linha Padrão
+    @mixin row {
+        height: 100%;   width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    //Bloco Central
+    @mixin article {
+        height: 100%;   width: 990px;
+        margin: 0 auto;
+    }
+
+    //Fonte Padrão
+    @mixin default_font {
+        font-family: "Open Sans", Arial, Verdana;
+        font-size: 15px;
+        font-weight: lighter;
+    }
