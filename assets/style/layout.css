@@ -50,7 +50,8 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 */
 /* Settings
 ----------------------------------------------------------------------- */
-#FLOAT-LEFT {
+#FLOAT-LEFT, body section,
+body nav {
   float: left;
 }
 
@@ -132,4 +133,32 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 */
 html {
   height: 100%;
+}
+
+body section,
+body nav {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  padding: 60px 0;
+}
+body section.first {
+  background: url(../image/bg-first.jpg) no-repeat top center #4b5d82;
+  height: 1014px;
+  padding: 0;
+}
+body nav.main {
+  background: #282928;
+  height: 85px;
+  padding: 0;
+}
+body section.second {
+  background: #f7f8f8;
+}
+body section.third {
+  background: #322e2d;
+}
+body section.fourth {
+  background: white;
 }

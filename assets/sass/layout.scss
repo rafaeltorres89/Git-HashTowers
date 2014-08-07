@@ -30,4 +30,40 @@
 
     body
     {
+        section,
+        nav
+        {
+            @extend #FLOAT-LEFT;
+            @include row;
+            padding: 60px 0;
+        }
+
+        section.first
+        {
+            background: url(../image/bg-first.jpg) no-repeat top center $palette-purple;
+            height: 1014px;
+            padding: 0;
+        }
+
+        nav.main
+        {
+            background: $palette-black;
+            height: 85px;
+            padding: 0;
+        }
+
+        section.second
+        {
+            background: $palette-light;
+        }
+
+        section.third
+        {
+            background: $palette-brown;
+        }
+
+        section.fourth
+        {
+            background: $palette-white;
+        }
     }
