@@ -30,19 +30,49 @@
 
     body
     {
+        color: $palette-gray;
+        font-family: "Roboto", Arial, Verdana, sans-serif;
+        font-size: 14px;
+
+        a
+        {
+            @extend #NO-TEXT-DECORATION;
+            font-family: "Open Sans", Arial, Verdana, sans-serif;
+            font-size: 16px;
+            font-weight: 300;
+        }
+
         section,
         nav
         {
             @extend #FLOAT-LEFT;
             @include row;
             padding: 60px 0;
-        }
 
-        section.first
-        {
-            background: url(../image/bg-first.jpg) no-repeat top center $palette-purple;
-            height: 1014px;
-            padding: 0;
+            article
+            {
+                @include article;
+
+                ul
+                {
+                    @extend #FLOAT-LEFT;
+                    @include row;
+                    list-style: none;
+
+                    li
+                    {
+                        @extend #FLOAT-LEFT;
+                        margin: 0;
+
+                        a
+                        {
+                            @extend #FLOAT-LEFT;
+                            @include row;
+                            width: initial;
+                        }
+                    }
+                }
+            }
         }
 
         nav.main
@@ -50,6 +80,104 @@
             background: $palette-black;
             height: 85px;
             padding: 0;
+
+            article
+            {
+                ul
+                {
+                    width: 702px;
+
+                    li
+                    {
+                        border-left: solid 1px #363B3F;
+                        height: 100%;
+
+                        a
+                        {
+                            @extend #TEXT-CENTER;
+                            color: $palette-white;
+                            line-height: 85px;
+                            padding: 0 30px;
+                        }
+
+                        a:hover { background: $palette-pink; }
+                    }
+
+                    li:last-child { border-right: solid 1px #363B3F; }
+                }
+
+                a.contact
+                {
+                    @extend #FLOAT-RIGHT;
+                    @extend #TEXT-CENTER;
+                    @include gradiente;
+                    color: $palette-white;
+                    height: 45px;
+                    line-height: 45px;
+                    margin-top: 20px;
+                    width: 120px;
+                }
+
+                a.contact:hover { background: $palette-orange; }
+            }
+        }
+
+        section.first
+        {
+            background: url(../image/bg-first.jpg) no-repeat top center $palette-purple;
+            height: 1014px;
+            padding: 0;
+
+            article
+            {
+                h1
+                {
+                    a
+                    {
+                        @extend #FLOAT-LEFT;
+                        @extend #TEXT-INDENT;
+                        background: url(../image/sprite.png) no-repeat;
+                        height: 342px;
+                        width: 378px;
+                        margin-top: 160px;
+                    }
+                }
+
+                ul
+                {
+                    @extend #FLOAT-RIGHT;
+                    height: 20px;
+                    margin-top: 50px;
+                    width: 151px;
+
+                    li
+                    {
+                        @extend #FLOAT-LEFT;
+                        background: url(../image/nav.png) no-repeat 0 0;
+                        height: 100%;
+                        margin-right: 20px;
+                        width: 25px;
+
+                        a
+                        {
+                            @extend #TEXT-INDENT;
+                            width: 100%;
+                        }
+                    }
+
+                    li:last-child { margin-right: 0; }
+
+                    li:nth-child(1) { background-position: 0 0; }
+                    li:nth-child(2) { background-position: -25px 0; }
+                    li:nth-child(3) { background-position: -50px 0;   width: 21px; }
+                    li:nth-child(4) { background-position: -71px 0;   width: 20px; }
+
+                    li:nth-child(1):hover { background-position: 0 -20px; }
+                    li:nth-child(2):hover { background-position: -25px -20px; }
+                    li:nth-child(3):hover { background-position: -50px -20px; }
+                    li:nth-child(4):hover { background-position: -71px -20px; }
+                }
+            }
         }
 
         section.second
