@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*  ==========================================================================
     STYLE: HASH TOWERS
     --------------------------------------------------------------------------
@@ -54,7 +55,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 body nav, body section article ul,
 body nav article ul, body section article ul li,
 body nav article ul li, body section article ul li a,
-body nav article ul li a, body section.first article h1 a, body section.first article ul li {
+body nav article ul li a, body section.first article .language, body section.first article .language .ico, body section.first article .language select, body section.first article h1 a, body section.first article ul li {
   float: left;
 }
 
@@ -94,19 +95,19 @@ body nav article ul li a, body section.first article h1 a, body section.first ar
   text-decoration: none;
 }
 
-#TEXT-INDENT, body section.first article h1 a, body section.first article ul li a {
+#TEXT-INDENT, body section.first article h1 a, body section.first article ul li a, body section.third article ul li a {
   text-indent: -9999px;
 }
 
-#TEXT-CENTER, body nav.main article ul li a, body nav.main article a.contact {
+#TEXT-CENTER, body nav.main article ul li a, body nav.main article a.contact, body section.second article, body section.third article {
   text-align: center;
 }
 
-#POSITION-ABSOLUTE {
+#POSITION-ABSOLUTE, body section.first article h1 {
   position: absolute;
 }
 
-#POSITION-RELATIVE {
+#POSITION-RELATIVE, body section.first article {
   position: relative;
 }
 
@@ -114,7 +115,7 @@ body nav article ul li a, body section.first article h1 a, body section.first ar
   position: fixed;
 }
 
-#OVERFLOW-HIDDEN {
+#OVERFLOW-HIDDEN, body section.first article .language {
   overflow: hidden;
 }
 
@@ -142,6 +143,15 @@ body {
   color: #888888;
   font-family: "Roboto", Arial, Verdana, sans-serif;
   font-size: 14px;
+  /*
+      ===========================================================================
+      Parado Aqui: *** RETIRAR COMENTÁRIO ***
+      ---------------------------------------------------------------------------
+      
+      Estamos desenvolvendo a parte onde a imagem do background da seção 3, 4 e 5
+      fica fixada na section principal (fourth), alterando apenas quando a 
+      próxima section principal (fifty) chegar na base do browser.
+  */
 }
 body a {
   font-family: "Open Sans", Arial, Verdana, sans-serif;
@@ -182,6 +192,20 @@ body nav article ul li a {
   padding: 0;
   width: initial;
 }
+body section article p,
+body nav article p {
+  color: #888888;
+  font-family: "Roboto", Arial, Verdana, sans-serif;
+  font-size: 14px;
+  font-weight: 100;
+}
+body section article h2,
+body nav article h2 {
+  font-family: "Roboto", Arial, Verdana, sans-serif;
+  font-size: 40px;
+  font-weight: 300;
+  width: 100%;
+}
 body nav.main {
   background: #282928;
   height: 85px;
@@ -195,7 +219,7 @@ body nav.main article ul li {
   height: 100%;
 }
 body nav.main article ul li a {
-  color: white;
+  color: #fcfcfc;
   line-height: 85px;
   padding: 0 30px;
 }
@@ -222,7 +246,7 @@ body nav.main article a.contact {
   /* W3C */
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e52667', endColorstr='#e75a41',GradientType=1 );
   /* IE6-9 fallback on horizontal gradient */
-  color: white;
+  color: #fcfcfc;
   height: 45px;
   line-height: 45px;
   margin-top: 20px;
@@ -236,11 +260,38 @@ body section.first {
   height: 1014px;
   padding: 0;
 }
-body section.first article h1 a {
+body section.first article .language {
+  background: url(../image/seta.png) no-repeat right;
+  height: 20px;
+  margin-top: 50px;
+  width: 178px;
+}
+body section.first article .language .ico {
+  background: url(../image/sprite.png) -378px 0 no-repeat;
+  height: 17px;
+  width: 17px;
+}
+body section.first article .language select {
+  background: transparent;
+  border: 0;
+  color: #fcfcfc;
+  font-family: "Open Sans", Arial, Verdana, sans-serif;
+  font-size: 14px;
+  font-weight: lighter;
+  margin: -1px 0 0 5px;
+  width: 155px;
+  -webkit-appearance: none;
+}
+body section.first article h1 {
   background: url(../image/sprite.png) no-repeat;
   height: 342px;
   width: 378px;
   margin-top: 160px;
+  z-index: 1000;
+}
+body section.first article h1 a {
+  height: 100%;
+  width: 100%;
 }
 body section.first article ul {
   height: 20px;
@@ -288,9 +339,85 @@ body section.first article ul li:nth-child(4):hover {
 body section.second {
   background: #f7f8f8;
 }
+body section.second article p {
+  color: #0a9ccd;
+  font-size: 40px;
+}
 body section.third {
-  background: #322e2d;
+  background: url(../image/bg-second.jpg) repeat-x center #322e2d;
+}
+body section.third article h2 {
+  color: #e75a40;
+  margin-bottom: 40px;
+}
+body section.third article p {
+  color: #fcfcfc;
+  font-size: 30px;
+  margin-bottom: 30px;
+  width: 100%;
+}
+body section.third article ul {
+  height: 374px;
+}
+body section.third article ul li {
+  background: url(../image/servicos.jpg) 0 0 no-repeat;
+  height: 182px;
+  margin: 0 10px 10px 0;
+  width: 240px;
+}
+body section.third article ul li a {
+  width: 100%;
+}
+body section.third article ul li:nth-child(1) {
+  background-position: 0 0;
+}
+body section.third article ul li:nth-child(2) {
+  background-position: -250px 0;
+}
+body section.third article ul li:nth-child(3) {
+  background-position: -500px 0;
+}
+body section.third article ul li:nth-child(4) {
+  background-position: -750px 0;
+  margin-right: 0;
+}
+body section.third article ul li:nth-child(5) {
+  background-position: 0 -192px;
+}
+body section.third article ul li:nth-child(6) {
+  background-position: -250px -192px;
+}
+body section.third article ul li:nth-child(7) {
+  background-position: -500px -192px;
+}
+body section.third article ul li:nth-child(8) {
+  background-position: -750px -192px;
+  margin-right: 0;
+}
+body section.third article ul li:nth-child(4):hover {
+  background-position: -750px -384px;
 }
 body section.fourth {
-  background: white;
+  background: url(../image/bg-third.jpg) no-repeat center #fcfcfc fixed;
+  height: 1431px;
+  padding: 0;
+}
+body section.fourth section {
+  background: #fcfcfc;
+  height: initial;
+}
+body section.fourth section.transparent {
+  background: none;
+}
+body section.fifty {
+  background: url(../image/bg-first.jpg) no-repeat center fixed;
+  height: 1431px;
+  padding: 0;
+}
+body section.fifty section {
+  background: #fcfcfc;
+  height: initial;
+}
+body section.fifty section.transparent {
+  background: none;
 }

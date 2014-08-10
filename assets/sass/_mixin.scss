@@ -40,3 +40,10 @@
         background: linear-gradient(45deg, #e52667 0%,#e75a41 100%); /* W3C */
         filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e52667', endColorstr='#e75a41',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
     }
+
+    //Opacidade
+    @mixin opacidade {
+        opacity:0.90;
+        -moz-opacity: 0.90;
+        filter: alpha(opacity=90);
+    }

@@ -72,6 +72,22 @@
                         }
                     }
                 }
+
+                p
+                {
+                    color: $palette-gray;
+                    font-family: "Roboto", Arial, Verdana, sans-serif;
+                    font-size: 14px;
+                    font-weight: 100;
+                }
+
+                h2
+                {
+                    font-family: "Roboto", Arial, Verdana, sans-serif;
+                    font-size: 40px;
+                    font-weight: 300;
+                    width: 100%;
+                }
             }
         }
 
@@ -130,16 +146,55 @@
 
             article
             {
-                h1
+                @extend #POSITION-RELATIVE;
+
+                .language
                 {
-                    a
+                    @extend #FLOAT-LEFT;
+                    @extend #OVERFLOW-HIDDEN;
+                    background: url(../image/seta.png) no-repeat right;
+                    height: 20px;
+                    margin-top: 50px;
+                    width: 178px;
+
+                    .ico
                     {
                         @extend #FLOAT-LEFT;
+                        background: url(../image/sprite.png) -378px 0 no-repeat;
+                        height: 17px;
+                        width: 17px;
+                    }
+
+                    select
+                    {
+                        @extend #FLOAT-LEFT;
+                        background: transparent;
+                        border: 0;
+                        color: $palette-white;
+                        font-family: "Open Sans", Arial, Verdana, sans-serif;
+                        font-size: 14px;
+                        font-weight: lighter;
+                        margin: -1px 0 0 5px;
+                        width: 155px;
+                        -webkit-appearance: none;
+                    }
+                }
+
+                h1
+                {
+                    @extend #POSITION-ABSOLUTE;
+                    background: url(../image/sprite.png) no-repeat;
+                    height: 342px;
+                    width: 378px;
+                    margin-top: 160px;
+                    z-index: 1000;
+
+                    a
+                    {
                         @extend #TEXT-INDENT;
-                        background: url(../image/sprite.png) no-repeat;
-                        height: 342px;
-                        width: 378px;
-                        margin-top: 160px;
+                        @extend #FLOAT-LEFT;
+                        height: 100%;
+                        width: 100%;
                     }
                 }
 
@@ -183,15 +238,117 @@
         section.second
         {
             background: $palette-light;
+
+            article
+            {
+                @extend #TEXT-CENTER;
+
+                p
+                {
+                    color: $palette-blue;
+                    font-size: 40px;
+                }
+            }
         }
 
         section.third
         {
-            background: $palette-brown;
+            background: url(../image/bg-second.jpg) repeat-x center $palette-brown;
+
+            article
+            {
+                @extend #TEXT-CENTER;
+
+                h2
+                {
+                    color: $palette-orange;
+                    margin-bottom: 40px;
+                }
+
+                p
+                {
+                    color: $palette-white;
+                    font-size: 30px;
+                    margin-bottom: 30px;
+                    width: 100%;
+                }
+
+                ul
+                {
+                    height: 374px;
+
+                    li
+                    {
+                        background: url(../image/servicos.jpg) 0 0 no-repeat;
+                        height: 182px;
+                        margin: 0 10px 10px 0;
+                        width: 240px;
+
+                        a
+                        {
+                            @extend #TEXT-INDENT;
+                            width: 100%;
+                        }
+                    }
+
+                    li:nth-child(1) { background-position: 0 0; }
+                    li:nth-child(2) { background-position: -250px 0; }
+                    li:nth-child(3) { background-position: -500px 0; }
+                    li:nth-child(4) { background-position: -750px 0;    margin-right: 0; }
+                    li:nth-child(5) { background-position: 0 -192px; }
+                    li:nth-child(6) { background-position: -250px -192px; }
+                    li:nth-child(7) { background-position: -500px -192px; }
+                    li:nth-child(8) { background-position: -750px -192px;    margin-right: 0; }
+
+                    li:nth-child(4):hover { background-position: -750px -384px; }
+
+                }
+            }
         }
+
+        /*
+            ===========================================================================
+            Parado Aqui: *** RETIRAR COMENTÁRIO ***
+            ---------------------------------------------------------------------------
+            
+            Estamos desenvolvendo a parte onde a imagem do background da seção 3, 4 e 5
+            fica fixada na section principal (fourth), alterando apenas quando a 
+            próxima section principal (fifty) chegar na base do browser.
+        */
 
         section.fourth
         {
-            background: $palette-white;
+            background: url(../image/bg-third.jpg) no-repeat center $palette-white fixed;
+            height: 1431px;
+            padding: 0;
+
+            section
+            {
+                background: $palette-white;
+                height: initial;
+            }
+
+            section.transparent
+            {
+                background: none;
+            }
+        }
+
+        section.fifty
+        {
+            background: url(../image/bg-first.jpg) no-repeat center fixed;
+            height: 1431px;
+            padding: 0;
+
+            section
+            {
+                background: $palette-white;
+                height: initial;
+            }
+
+            section.transparent
+            {
+                background: none;
+            }
         }
     }
