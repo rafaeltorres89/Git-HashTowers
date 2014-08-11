@@ -36,12 +36,31 @@
 
         .opacity { @include opacidade; }
 
+        .position
+        {
+            @extend #FLOAT-LEFT;
+            @extend #POSITION-ABSOLUTE;
+            @include row;
+            height: 85px;
+            margin-top: -145px;
+            width: 1px;
+            z-index: 1200;
+        }
+
         a
         {
             @extend #NO-TEXT-DECORATION;
             @include default_font;
             font-size: 16px;
             font-weight: 300;
+        }
+
+        .fixar
+        {
+            @extend #POSITION-FIXED;
+            border-bottom: solid 1px #363B3F;
+            margin-top: 0px !important;
+            z-index: 2000;
         }
 
         section,
@@ -94,6 +113,37 @@
                 {
                     @include gradiente;
                     color: $palette-white !important;
+                }
+
+                .language
+                {
+                    @extend #FLOAT-LEFT;
+                    @extend #OVERFLOW-HIDDEN;
+                    background: url(../image/seta.png) no-repeat right;
+                    height: 20px;
+                    margin-top: 50px;
+                    width: 178px;
+
+                    .ico
+                    {
+                        @extend #FLOAT-LEFT;
+                        background: url(../image/sprite.png) -378px 0 no-repeat;
+                        height: 17px;
+                        width: 17px;
+                    }
+
+                    select
+                    {
+                        @extend #FLOAT-LEFT;
+                        @include default_font;
+                        background: transparent;
+                        border: 0;
+                        color: $palette-white;
+                        font-size: 14px;
+                        margin: -1px 0 0 5px;
+                        width: 155px;
+                        -webkit-appearance: none;
+                    }
                 }
             }
 
@@ -174,37 +224,6 @@
             article
             {
                 @extend #POSITION-RELATIVE;
-
-                .language
-                {
-                    @extend #FLOAT-LEFT;
-                    @extend #OVERFLOW-HIDDEN;
-                    background: url(../image/seta.png) no-repeat right;
-                    height: 20px;
-                    margin-top: 50px;
-                    width: 178px;
-
-                    .ico
-                    {
-                        @extend #FLOAT-LEFT;
-                        background: url(../image/sprite.png) -378px 0 no-repeat;
-                        height: 17px;
-                        width: 17px;
-                    }
-
-                    select
-                    {
-                        @extend #FLOAT-LEFT;
-                        @include default_font;
-                        background: transparent;
-                        border: 0;
-                        color: $palette-white;
-                        font-size: 14px;
-                        margin: -1px 0 0 5px;
-                        width: 155px;
-                        -webkit-appearance: none;
-                    }
-                }
 
                 h1
                 {
@@ -485,6 +504,8 @@
             background: url(../image/bg-fourth.jpg) no-repeat center top fixed;
             padding: 0;
 
+            .position { margin-top: -85px; }
+
             section
             {
                 background: $palette-orange;
@@ -538,8 +559,10 @@
 
         section.sixth
         {
-            background: url(../image/bg-fifty.jpg) no-repeat center top fixed;
+            background: url(../image/bg-fifty.jpg) no-repeat center bottom fixed $palette-black;
             padding: 0;
+
+            .position { margin-top: -85px; }
 
             section
             {
@@ -646,7 +669,7 @@
 
         section.seventh
         {
-            background: url(../image/bg-first.jpg) no-repeat center bottom fixed;
+            background: url(../image/bg-first.jpg) no-repeat center bottom fixed $palette-purple;
             padding: 0;
 
             section
@@ -677,6 +700,95 @@
             footer
             {
                 background: $palette-purple;
+
+                section
+                {
+                    @extend #FLOAT-LEFT;
+                    background: none;
+                    padding: 0;
+
+                    article
+                    {
+                        @extend #POSITION-RELATIVE;
+
+                        ul.ht_info
+                        {
+                            background: url(../image/sprite.png) no-repeat 0 -342px;
+                            height: 195px;
+                            width: 410px;
+
+                            li
+                            {
+                                @extend #TEXT-CENTER;
+                                color: $palette-orange;
+                                font-family: "Roboto", Arial, Verdana, sans-serif;
+                                font-size: 20px;
+                                font-weight: 300;
+                                height: 65px;
+                                line-height: 65px;
+                                margin-top: 110px;
+                                width: 75px;
+                            }
+
+                            li:first-child { margin-left: 122px; }
+
+                            li:nth-child(2) { width: 105px; margin-top: 80px; }
+                        }
+
+                        ul.networks
+                        {
+                            @extend #FLOAT-RIGHT;
+                            height: 72px;
+                            width: 538px;
+
+                            li
+                            {
+                                background: url(../image/social.png) no-repeat 0 0;
+                                height: 72px;
+                                margin-right: 60px;
+                                width: 150px;
+
+                                a
+                                {
+                                    @extend #TEXT-INDENT;
+                                    width: 100%;
+                                }
+                            }
+
+                            li:last-child { width: 118px;   margin-right: 0; }
+
+                            li:nth-child(1) { background-position: 0 0; }
+                            li:nth-child(2) { background-position: -150px 0; }
+                            li:nth-child(3) { background-position: -300px 0; }
+
+                            li:nth-child(1):hover { background-position: 0 -72px; }
+                            li:nth-child(2):hover { background-position: -150px -72px; }
+                            li:nth-child(3):hover { background-position: -300px -72px; }
+                        }
+
+                        .select_foot { margin: 100px 0 0 40px; }
+
+                        p
+                        {
+                            @extend #FLOAT-RIGHT;
+                            @extend #POSITION-ABSOLUTE;
+                            color: $palette-white;
+                            font-size: 13px;
+                            right: 0;
+                            top: 172px;
+                            width: initial;
+
+                            a
+                            {
+                                color: $palette-light_purple;
+                                font-size: 13px;
+                                text-decoration: underline;
+                            }
+
+                            a:hover { @extend #NO-TEXT-DECORATION; }
+                        }
+                    }
+                }
             }
         }
     }

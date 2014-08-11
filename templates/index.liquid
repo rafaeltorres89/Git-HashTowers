@@ -1,5 +1,5 @@
 {% block content %}
-    <section class="first">
+    <section class="first" id="home">
     	<article>
             <div class="language">
                 <div class="ico"></div>
@@ -17,16 +17,17 @@
     		</ul>
     	</article>
     </section>
-    <nav class="main">
+    <nav class="main" id="nav">
     	<article>
 	    	<ul>
-	    		<li><a href="" title="">service</a></li>
-	    		<li><a href="" title="">about us</a></li>
-	    		<li><a href="" title="">jobs</a></li>
-	    		<li><a href="" title="">clients</a></li>
-	    		<li><a href="" title="">and more</a></li>
+                <li><a href="#home" title=""><img src="../assets/image/home.png" alt="" border="0"/></a></li>
+	    		<li><a href="#service" title="">service</a></li>
+	    		<li><a href="#aboutUs" title="">about us</a></li>
+	    		<li><a href="#jobs" title="">jobs</a></li>
+	    		<li><a href="#clients" title="">clients</a></li>
+	    		<li><a href="#more" title="">and more</a></li>
 	    	</ul>
-	    	<a href="" title="" class="contact">contact</a>
+	    	<a href="#contact" title="" class="contact">contact</a>
     	</article>
     </nav>
     <section class="second">
@@ -35,6 +36,7 @@
     	</article>
     </section>
     <section class="third">
+        <div class="position" id="service"></div>
     	<article>
             <h2>services</h2>
             <p>we cover anything that is needed for your digital presence</p>
@@ -52,6 +54,7 @@
     </section>
     <section class="fourth">
         <section>
+            <div class="position" id="aboutUs"></div>
             <article>
                 <h2>talking about us</h2>
                 <div class="box_50">
@@ -108,6 +111,7 @@
             </article>
         </section>
         <section class="projects">
+            <div class="position" id="jobs"></div>
             <article>
                 <h2>projects</h2>
                 <p>these are some of our projects,<br>if you want more...</p>
@@ -138,6 +142,7 @@
         </section>
     </section>
     <section class="fifty">
+        <div class="position" id="clients"></div>
         <section class="opacity clients">
             <article>
                 <h2>clients</h2>
@@ -154,6 +159,7 @@
         </section>
     </section>
     <section class="sixth">
+        <div class="position" id="contact"></div>
         <section class="opacity contact">
             <article>
                 <h2>hello</h2>
@@ -177,6 +183,29 @@
                 <aside></aside>
             </article>
         </section>
-        <footer class="opacity"></footer>
+        <footer class="opacity" id="more">
+            <section>
+                <article>
+                    <ul class="ht_info">
+                        <li>7</li>
+                        <li>10</li>
+                        <li>23</li>
+                    </ul>
+                    <ul class="networks">
+                        <li><a href="" title=""></a></li>
+                        <li><a href="" title=""></a></li>
+                        <li><a href="" title=""></a></li>
+                    </ul>
+                    <div class="language select_foot">
+                        <div class="ico"></div>
+                        <select>
+                            <option value="0">United States - English</option>
+                            <option value="1">Brasil - Português</option>
+                        </select>
+                    </div>
+                    <p> •  © 2014  •  Todos Direitos Reservados  •  <a href="" title="">Termos de Privacidade</a></p>
+                </article>
+            </section>
+        </footer>
     </section>
 {% endblock %}
