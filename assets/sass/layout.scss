@@ -34,16 +34,19 @@
         font-family: "Roboto", Arial, Verdana, sans-serif;
         font-size: 14px;
 
+        .opacity { @include opacidade; }
+
         a
         {
             @extend #NO-TEXT-DECORATION;
-            font-family: "Open Sans", Arial, Verdana, sans-serif;
+            @include default_font;
             font-size: 16px;
             font-weight: 300;
         }
 
         section,
-        nav
+        nav,
+        footer
         {
             @extend #FLOAT-LEFT;
             @include row;
@@ -53,32 +56,14 @@
             {
                 @include article;
 
-                ul
-                {
-                    @extend #FLOAT-LEFT;
-                    @include row;
-                    list-style: none;
-
-                    li
-                    {
-                        @extend #FLOAT-LEFT;
-                        margin: 0;
-
-                        a
-                        {
-                            @extend #FLOAT-LEFT;
-                            @include row;
-                            width: initial;
-                        }
-                    }
-                }
-
                 p
                 {
                     color: $palette-gray;
                     font-family: "Roboto", Arial, Verdana, sans-serif;
                     font-size: 14px;
                     font-weight: 100;
+
+                    strong { @extend #FONT-BOLD; }
                 }
 
                 h2
@@ -87,6 +72,48 @@
                     font-size: 40px;
                     font-weight: 300;
                     width: 100%;
+                }
+
+                a.btn
+                {
+                    @extend #TEXT-CENTER;
+                    @extend #POSITION-ABSOLUTE;
+                    @extend #SHOW;
+                    background: $palette-white;
+                    border: solid 2px;
+                    font-family: "Roboto", Arial, Verdana, sans-serif;
+                    font-size: 20px;
+                    font-weight: 300;
+                    height: 50px;
+                    line-height: 50px;
+                    text-transform: uppercase;
+                    width: 200px;
+                }
+
+                a.btn:hover
+                {
+                    @include gradiente;
+                    color: $palette-white !important;
+                }
+            }
+
+            ul
+            {
+                @extend #FLOAT-LEFT;
+                @include row;
+                list-style: none;
+
+                li
+                {
+                    @extend #FLOAT-LEFT;
+                    margin: 0;
+
+                    a
+                    {
+                        @extend #FLOAT-LEFT;
+                        @include row;
+                        width: initial;
+                    }
                 }
             }
         }
@@ -168,12 +195,11 @@
                     select
                     {
                         @extend #FLOAT-LEFT;
+                        @include default_font;
                         background: transparent;
                         border: 0;
                         color: $palette-white;
-                        font-family: "Open Sans", Arial, Verdana, sans-serif;
                         font-size: 14px;
-                        font-weight: lighter;
                         margin: -1px 0 0 5px;
                         width: 155px;
                         -webkit-appearance: none;
@@ -280,7 +306,7 @@
                     li
                     {
                         background: url(../image/servicos.jpg) 0 0 no-repeat;
-                        height: 182px;
+                        height: 172px;
                         margin: 0 10px 10px 0;
                         width: 240px;
 
@@ -291,64 +317,366 @@
                         }
                     }
 
-                    li:nth-child(1) { background-position: 0 0; }
-                    li:nth-child(2) { background-position: -250px 0; }
-                    li:nth-child(3) { background-position: -500px 0; }
-                    li:nth-child(4) { background-position: -750px 0;    margin-right: 0; }
-                    li:nth-child(5) { background-position: 0 -192px; }
-                    li:nth-child(6) { background-position: -250px -192px; }
-                    li:nth-child(7) { background-position: -500px -192px; }
-                    li:nth-child(8) { background-position: -750px -192px;    margin-right: 0; }
+                    li:nth-child(1) { background-position: -720px -344px; }
+                    li:nth-child(1):hover { background-position: -720px -516px; }
 
-                    li:nth-child(4):hover { background-position: -750px -384px; }
+                    li:nth-child(2) { background-position: 0 0; }
+                    li:nth-child(2):hover { background-position: 0 -172px; }
 
+                    li:nth-child(3) { background-position: -240px 0; }
+                    li:nth-child(3):hover { background-position: -240px -172px; }
+
+                    li:nth-child(4) { background-position: -480px 0;    margin-right: 0; }
+                    li:nth-child(4):hover { background-position: -480px -172px; }
+
+                    li:nth-child(5) { background-position: 0 -344px; }
+                    li:nth-child(5):hover { background-position: 0 -516px; }
+
+                    li:nth-child(6) { background-position: -240px -344px; }
+                    li:nth-child(6):hover { background-position: -240px -516px; }
+
+                    li:nth-child(7) { background-position: -480px -344px; }
+                    li:nth-child(7):hover { background-position: -480px -516px; }
+
+                    li:nth-child(8) { background-position: -720px 0;    margin-right: 0; }
+                    li:nth-child(8):hover { background-position: -720px -172px; }
                 }
             }
         }
 
-        /*
-            ===========================================================================
-            Parado Aqui: *** RETIRAR COMENTÁRIO ***
-            ---------------------------------------------------------------------------
-            
-            Estamos desenvolvendo a parte onde a imagem do background da seção 3, 4 e 5
-            fica fixada na section principal (fourth), alterando apenas quando a 
-            próxima section principal (fifty) chegar na base do browser.
-        */
-
         section.fourth
         {
-            background: url(../image/bg-third.jpg) no-repeat center $palette-white fixed;
-            height: 1431px;
+            background: url(../image/bg-third.jpg) no-repeat center #4c576c fixed;
             padding: 0;
 
             section
             {
                 background: $palette-white;
                 height: initial;
+
+                article
+                {
+                    @extend #TEXT-CENTER;
+
+                    h2
+                    {
+                        color: $palette-pink;
+                        margin-bottom: 70px;
+                    }
+
+                    .box_50
+                    {
+                        @extend #FLOAT-LEFT;
+                        @include box_50;
+                        text-align: left;
+
+                        p
+                        {
+                            margin-bottom: 25px;
+                            width: 90%;
+                        }
+                    }
+
+                    article
+                    {
+                        @extend #FLOAT-LEFT;
+                        @extend #POSITION-RELATIVE;
+                        margin: 35px 0 50px;
+
+                        a.btn
+                        {
+                            border-color: $palette-pink;
+                            color: $palette-pink;
+                            left: 50%;
+                            margin-left: -100px;
+                        }
+                    }
+                }
+
             }
 
             section.transparent
             {
                 background: none;
+
+                article
+                {
+
+                    .box_50
+                    {
+                        @extend #TEXT-CENTER;
+                        width: 33.3%;
+
+                        p
+                        {
+                            color: $palette-white;
+                            font-size: 30px;
+
+                            span.pink
+                            {
+                                color: $palette-pink;
+                            }
+
+                            span.pHundred { font-size: 100px; }
+
+                            span.font_light
+                            {
+                                @extend #SHOW;
+                                font-size: 18px;
+                                font-weight: 300;
+                                line-height: 22px;
+                            }
+                        }
+                    }
+                }
+            }
+
+            section.projects
+            {
+                article
+                {
+                    h2 { color: $palette-orange; }
+
+                    p { font-size: 30px; }
+
+                    article
+                    {
+                        a.btn
+                        {
+                            border-color: $palette-orange;
+                            color: $palette-orange;
+                        }
+                    }
+                }
+            }
+
+            section.block_work
+            {
+                @extend #OVERFLOW-HIDDEN;
+                background: $palette-black;
+                height: 360px;
+                padding: 0;
+
+                ul
+                {
+                    width: 150%;
+
+                    li
+                    {
+                        height: 180px;
+                        width: 310px;
+
+                        a
+                        {
+                            @extend #SHOW;
+                            @extend #TEXT-CENTER;
+                            line-height: 180px;
+                            width: 100%;
+                        }
+
+                        a:hover { @include gradiente; }
+                    }
+                }
             }
         }
 
         section.fifty
         {
-            background: url(../image/bg-first.jpg) no-repeat center fixed;
-            height: 1431px;
+            background: url(../image/bg-fourth.jpg) no-repeat center top fixed;
+            padding: 0;
+
+            section
+            {
+                background: $palette-orange;
+
+                article
+                {
+                    @extend #TEXT-CENTER;
+
+                    h2
+                    {
+                        color: $palette-white;
+                        margin-bottom: 40px;
+                    }
+
+                    ul
+                    {
+                        height: 300px;
+                        margin-bottom: 40px;
+
+                        li
+                        {
+                            background: $palette-white;
+                            height: 140px;
+                            margin: 0 10px 10px 0;
+                            width: 323px;
+
+                            a
+                            {
+                                @extend #SHOW;
+                                @extend #TEXT-CENTER;
+                                // @extend #TEXT-INDENT;
+                                line-height: 140px;
+                                width: 100%;
+                            }
+                        }
+
+                        li:nth-child(3) { margin-right: 0; }
+                        li:nth-child(6) { margin-right: 0; }
+                    }
+
+                    p
+                    {
+                        color: $palette-white;
+                        font-size: 20px;
+                        margin: 0 auto;
+                        width: 750px;
+                    }
+                }
+            }
+        }
+
+        section.sixth
+        {
+            background: url(../image/bg-fifty.jpg) no-repeat center top fixed;
+            padding: 0;
+
+            section
+            {
+                background: $palette-black;
+
+                article
+                {
+                    @extend #TEXT-CENTER;
+                    @extend #POSITION-RELATIVE;
+
+                    h2
+                    {
+                        color: $palette-orange;
+                        margin-bottom: 40px;
+                    }
+                }
+
+                form
+                {
+                    @extend #FLOAT-LEFT;
+                    @include row;
+                    height: 420px;
+
+                    input[type="text"]
+                    {
+                        @extend #FLOAT-LEFT;
+                        @include default_font;
+                        background: none;
+                        border: none;
+                        border-bottom: solid 1px $palette-orange;
+                        color: $palette-orange;
+                        height: 31px;
+                        font-size: 30px;
+                        margin-bottom: 50px;
+                        padding-left: 20px;
+                        width: 560px;
+                    }
+
+                    textarea
+                    {
+                        @extend #FLOAT-LEFT;
+                        @include default_font;
+                        background: none;
+                        border: none;
+                        border-bottom: solid 1px $palette-orange;
+                        color: $palette-orange;
+                        font-size: 30px;
+                        margin-bottom: 50px;
+                        min-height: 150px;
+                        max-height: 150px;
+                        min-width: 100%;
+                        max-width: 100%;
+                        padding-left: 20px;
+                    }
+
+                    input[type="button"]
+                    {
+                        @extend #FLOAT-LEFT;
+                        @extend #TEXT-CENTER;
+                        @extend #SHOW;
+                        background: $palette-white;
+                        border: solid 2px $palette-orange;
+                        color: $palette-orange;
+                        cursor: pointer;
+                        font-family: "Roboto", Arial, Verdana, sans-serif;
+                        font-size: 20px;
+                        font-weight: 300;
+                        height: 50px;
+                        line-height: 45px;
+                        text-transform: uppercase;
+                        width: 200px;
+                    }
+
+                    input[type="button"]:hover
+                    {
+                        @include gradiente;
+                        color: $palette-white !important;
+                    }
+                }
+
+                p
+                {
+                    @extend #POSITION-ABSOLUTE;
+                    right: 0;
+                    color: $palette-blue;
+                    font-size: 16px;
+                    text-align: right;
+
+                    a
+                    {
+                        @extend #FONT-BOLD;
+                        color: $palette-blue;
+                        text-decoration: none;
+                    }
+
+                    a:hover
+                    {
+                        color: $palette-pink;
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+
+        section.seventh
+        {
+            background: url(../image/bg-first.jpg) no-repeat center bottom fixed;
             padding: 0;
 
             section
             {
                 background: $palette-white;
-                height: initial;
+
+                article
+                {
+                    @extend #TEXT-CENTER;
+                    @extend #POSITION-RELATIVE;
+
+                    h2
+                    {
+                        color: $palette-purple;
+                        margin-bottom: 50px;
+                    }
+
+                    aside
+                    {
+                        @extend #FLOAT-LEFT;
+                        @include article;
+                        background: url(../image/world.png) no-repeat center;
+                        height: 535px;
+                    }
+                }
             }
 
-            section.transparent
+            footer
             {
-                background: none;
+                background: $palette-purple;
             }
         }
     }
