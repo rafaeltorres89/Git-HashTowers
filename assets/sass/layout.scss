@@ -35,11 +35,12 @@
         font-size: 14px;
 
         .opacity { @include opacidade; }
+
         .opacity_nav
         {
-            opacity:0.97;
-            -moz-opacity: 0.97;
-            filter: alpha(opacity=97);
+            opacity:0.90;
+            -moz-opacity: 0.90;
+            filter: alpha(opacity=90);
         }
 
         .position
@@ -418,6 +419,76 @@
                             margin-left: -100px;
                         }
                     }
+
+                    .our_team
+                    {
+                        @extend #FLOAT-LEFT;
+                        @include row;
+                        margin-top: 50px;
+                        text-align: left;
+
+                        h4
+                        {
+                            @extend #FLOAT-LEFT;
+                            color: $palette-blue;
+                            font-family: "Roboto", Arial, Verdana, sans-serif;
+                            font-size: 25px;
+                            font-weight: 300;
+                            width: 100%;
+                        }
+
+                        article
+                        {
+                            @extend #FLOAT-LEFT;
+                            @include row;
+                            margin: 25px 0;
+                            text-align: left;
+
+                            .box_img
+                            {
+                                @extend #FLOAT-LEFT;
+                                background: $palette-white;
+                                border: solid 10px #f2f2f2;
+                                height: 160px;
+                                margin-right: 20px;
+                                width: 160px;
+
+                                img
+                                {
+                                    border: none;
+                                    height: 160px;
+                                    width: 160px;
+                                }
+                            }
+
+                            p
+                            {
+                                span
+                                {
+                                    color: $palette-pink;
+                                    font-size: 16px;
+                                    font-weight: 300;
+                                }
+
+                                strong
+                                {
+                                    font-weight: normal;
+                                    font-size: 12px;
+                                }
+
+                                a
+                                {
+                                    color: $palette-blue;
+                                    font-size: 14px;
+                                    text-decoration: underline;
+                                }
+
+                                a:hover { text-decoration: none; }
+
+                                b { font-weight: normal; }
+                            }
+                        }
+                    }
                 }
 
             }
@@ -492,6 +563,7 @@
                     {
                         height: 180px;
                         width: 310px;
+                        background-position: 0 0;
 
                         a
                         {
@@ -501,8 +573,60 @@
                             width: 100%;
                         }
 
-                        a:hover { @include gradiente; }
+                        // a:hover
+                        // {
+                        //     @include gradiente;
+                        //     @include opacidade;
+                        // }
                     }
+
+                    li:nth-child(1),
+                    li:nth-child(5),
+                    li:nth-child(9),
+                    li:nth-child(13)
+                    { background: url(../image/project/limas.jpg) no-repeat; }
+
+                    li:nth-child(1):hover,
+                    li:nth-child(5):hover,
+                    li:nth-child(9):hover,
+                    li:nth-child(13):hover
+                    { background-position: 0 -180px; }
+
+                    li:nth-child(2),
+                    li:nth-child(6),
+                    li:nth-child(10),
+                    li:nth-child(14)
+                    { background: url(../image/project/fapesp.jpg) no-repeat; }
+
+                    li:nth-child(2):hover,
+                    li:nth-child(6):hover,
+                    li:nth-child(10):hover,
+                    li:nth-child(14):hover
+                    { background-position: 0 -180px; }
+
+                    li:nth-child(3),
+                    li:nth-child(7),
+                    li:nth-child(11),
+                    li:nth-child(15)
+                    { background: url(../image/project/polishop.jpg) no-repeat; }
+
+                    li:nth-child(3):hover,
+                    li:nth-child(7):hover,
+                    li:nth-child(11):hover,
+                    li:nth-child(15):hover
+                    { background-position: 0 -180px; }
+
+                    li:nth-child(4),
+                    li:nth-child(8),
+                    li:nth-child(12),
+                    li:nth-child(16)
+                    { background: url(../image/project/ipbca.jpg) no-repeat; }
+
+                    li:nth-child(4):hover,
+                    li:nth-child(8):hover,
+                    li:nth-child(12):hover,
+                    li:nth-child(16):hover
+                    { background-position: 0 -180px; }
                 }
             }
         }
@@ -538,20 +662,33 @@
                             background: $palette-white;
                             height: 140px;
                             margin: 0 10px 10px 0;
+                            line-height: 140px;
                             width: 323px;
-
-                            a
-                            {
-                                @extend #SHOW;
-                                @extend #TEXT-CENTER;
-                                // @extend #TEXT-INDENT;
-                                line-height: 140px;
-                                width: 100%;
-                            }
                         }
 
                         li:nth-child(3) { margin-right: 0; }
                         li:nth-child(6) { margin-right: 0; }
+
+                        li.buscape { background: url(../image/clients/buscape.jpg) no-repeat 0 0; }
+                        li.buscape:hover { background-position: 0 -140px; }
+
+                        li.limas { background: url(../image/clients/limas.jpg) no-repeat 0 0; }
+                        li.limas:hover { background-position: 0 -140px; }
+
+                        li.ipbca { background: url(../image/clients/ipbca.jpg) no-repeat 0 0; }
+                        li.ipbca:hover { background-position: 0 -140px; }
+
+                        li.acsp { background: url(../image/clients/acsp.jpg) no-repeat 0 0; }
+                        li.acsp:hover { background-position: 0 -140px; }
+
+                        li.karsten { background: url(../image/clients/karsten.jpg) no-repeat 0 0; }
+                        li.karsten:hover { background-position: 0 -140px; }
+
+                        li.cennarium { background: url(../image/clients/cennarium.jpg) no-repeat 0 0; }
+                        li.cennarium:hover { background-position: 0 -140px; }
+
+                        li.winke { background: url(../image/clients/winke.jpg) no-repeat 0 0; }
+                        li.winke:hover { background-position: 0 -140px; }
                     }
 
                     p

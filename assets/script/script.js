@@ -26,4 +26,14 @@ $(function(){
 
         return false;
     });
+
+    $('.our_team').hide();
+
+    $('a.team').click(function(event){
+        event.preventDefault();
+        $(".our_team").toggle("slow");
+    });
+
+    //Bloco de comentário
+    $('#comment').hide();
 });

@@ -64,7 +64,7 @@ body footer ul, body section ul li,
 body nav ul li,
 body footer ul li, body section ul li a,
 body nav ul li a,
-body footer ul li a, body section.first article h1 a, body section.first article ul li, body section.fourth section article .box_50, body section.fourth section article article, body section.sixth section form, body section.sixth section form input[type="text"], body section.sixth section form textarea, body section.sixth section form input[type="button"], body section.seventh section article aside, body section.seventh footer section {
+body footer ul li a, body section.first article h1 a, body section.first article ul li, body section.fourth section article .box_50, body section.fourth section article article, body section.fourth section article .our_team, body section.fourth section article .our_team h4, body section.fourth section article .our_team article, body section.fourth section article .our_team article .box_img, body section.sixth section form, body section.sixth section form input[type="text"], body section.sixth section form textarea, body section.sixth section form input[type="button"], body section.seventh section article aside, body section.seventh footer section {
   float: left;
 }
 
@@ -78,7 +78,7 @@ body footer ul li a, body section.first article h1 a, body section.first article
 
 #SHOW, body section article a.btn,
 body nav article a.btn,
-body footer article a.btn, body section.fourth section.transparent article .box_50 p span.font_light, body section.fourth section.block_work ul li a, body section.fifty section article ul li a, body section.sixth section form input[type="button"] {
+body footer article a.btn, body section.fourth section.transparent article .box_50 p span.font_light, body section.fourth section.block_work ul li a, body section.sixth section form input[type="button"] {
   display: block;
 }
 
@@ -114,7 +114,7 @@ body footer article p strong, body section.sixth section p a {
 
 #TEXT-CENTER, body section article a.btn,
 body nav article a.btn,
-body footer article a.btn, body nav.main article ul li a, body nav.main article a.contact, body section.second article, body section.third article, body section.fourth section article, body section.fourth section.transparent article .box_50, body section.fourth section.block_work ul li a, body section.fifty section article, body section.fifty section article ul li a, body section.sixth section article, body section.sixth section form input[type="button"], body section.seventh section article, body section.seventh footer section article ul.ht_info li {
+body footer article a.btn, body nav.main article ul li a, body nav.main article a.contact, body section.second article, body section.third article, body section.fourth section article, body section.fourth section.transparent article .box_50, body section.fourth section.block_work ul li a, body section.fifty section article, body section.sixth section article, body section.sixth section form input[type="button"], body section.seventh section article, body section.seventh footer section article ul.ht_info li {
   text-align: center;
 }
 
@@ -169,9 +169,9 @@ body .opacity {
   filter: alpha(opacity=90);
 }
 body .opacity_nav {
-  opacity: 0.97;
-  -moz-opacity: 0.97;
-  filter: alpha(opacity=97);
+  opacity: 0.90;
+  -moz-opacity: 0.90;
+  filter: alpha(opacity=90);
 }
 body .position {
   height: 100%;
@@ -553,6 +553,61 @@ body section.fourth section article article a.btn {
   left: 50%;
   margin-left: -100px;
 }
+body section.fourth section article .our_team {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  margin-top: 50px;
+  text-align: left;
+}
+body section.fourth section article .our_team h4 {
+  color: #0a9ccd;
+  font-family: "Roboto", Arial, Verdana, sans-serif;
+  font-size: 25px;
+  font-weight: 300;
+  width: 100%;
+}
+body section.fourth section article .our_team article {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  margin: 25px 0;
+  text-align: left;
+}
+body section.fourth section article .our_team article .box_img {
+  background: #fcfcfc;
+  border: solid 10px #f2f2f2;
+  height: 160px;
+  margin-right: 20px;
+  width: 160px;
+}
+body section.fourth section article .our_team article .box_img img {
+  border: none;
+  height: 160px;
+  width: 160px;
+}
+body section.fourth section article .our_team article p span {
+  color: #e32666;
+  font-size: 16px;
+  font-weight: 300;
+}
+body section.fourth section article .our_team article p strong {
+  font-weight: normal;
+  font-size: 12px;
+}
+body section.fourth section article .our_team article p a {
+  color: #0a9ccd;
+  font-size: 14px;
+  text-decoration: underline;
+}
+body section.fourth section article .our_team article p a:hover {
+  text-decoration: none;
+}
+body section.fourth section article .our_team article p b {
+  font-weight: normal;
+}
 body section.fourth section.transparent {
   background: none;
 }
@@ -595,28 +650,59 @@ body section.fourth section.block_work ul {
 body section.fourth section.block_work ul li {
   height: 180px;
   width: 310px;
+  background-position: 0 0;
 }
 body section.fourth section.block_work ul li a {
   line-height: 180px;
   width: 100%;
 }
-body section.fourth section.block_work ul li a:hover {
-  background: #e52667;
-  /* Old browsers */
-  background: -moz-linear-gradient(45deg, #e52667 0%, #e75a41 100%);
-  /* FF3.6+ */
-  background: -webkit-gradient(linear, left bottom, right top, color-stop(0%, #e52667), color-stop(100%, #e75a41));
-  /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(45deg, #e52667 0%, #e75a41 100%);
-  /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(45deg, #e52667 0%, #e75a41 100%);
-  /* Opera 11.10+ */
-  background: -ms-linear-gradient(45deg, #e52667 0%, #e75a41 100%);
-  /* IE10+ */
-  background: linear-gradient(45deg, #e52667 0%, #e75a41 100%);
-  /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e52667', endColorstr='#e75a41',GradientType=1 );
-  /* IE6-9 fallback on horizontal gradient */
+body section.fourth section.block_work ul li:nth-child(1),
+body section.fourth section.block_work ul li:nth-child(5),
+body section.fourth section.block_work ul li:nth-child(9),
+body section.fourth section.block_work ul li:nth-child(13) {
+  background: url(../image/project/limas.jpg) no-repeat;
+}
+body section.fourth section.block_work ul li:nth-child(1):hover,
+body section.fourth section.block_work ul li:nth-child(5):hover,
+body section.fourth section.block_work ul li:nth-child(9):hover,
+body section.fourth section.block_work ul li:nth-child(13):hover {
+  background-position: 0 -180px;
+}
+body section.fourth section.block_work ul li:nth-child(2),
+body section.fourth section.block_work ul li:nth-child(6),
+body section.fourth section.block_work ul li:nth-child(10),
+body section.fourth section.block_work ul li:nth-child(14) {
+  background: url(../image/project/fapesp.jpg) no-repeat;
+}
+body section.fourth section.block_work ul li:nth-child(2):hover,
+body section.fourth section.block_work ul li:nth-child(6):hover,
+body section.fourth section.block_work ul li:nth-child(10):hover,
+body section.fourth section.block_work ul li:nth-child(14):hover {
+  background-position: 0 -180px;
+}
+body section.fourth section.block_work ul li:nth-child(3),
+body section.fourth section.block_work ul li:nth-child(7),
+body section.fourth section.block_work ul li:nth-child(11),
+body section.fourth section.block_work ul li:nth-child(15) {
+  background: url(../image/project/polishop.jpg) no-repeat;
+}
+body section.fourth section.block_work ul li:nth-child(3):hover,
+body section.fourth section.block_work ul li:nth-child(7):hover,
+body section.fourth section.block_work ul li:nth-child(11):hover,
+body section.fourth section.block_work ul li:nth-child(15):hover {
+  background-position: 0 -180px;
+}
+body section.fourth section.block_work ul li:nth-child(4),
+body section.fourth section.block_work ul li:nth-child(8),
+body section.fourth section.block_work ul li:nth-child(12),
+body section.fourth section.block_work ul li:nth-child(16) {
+  background: url(../image/project/ipbca.jpg) no-repeat;
+}
+body section.fourth section.block_work ul li:nth-child(4):hover,
+body section.fourth section.block_work ul li:nth-child(8):hover,
+body section.fourth section.block_work ul li:nth-child(12):hover,
+body section.fourth section.block_work ul li:nth-child(16):hover {
+  background-position: 0 -180px;
 }
 body section.fifty {
   background: url(../image/bg-fourth.jpg) no-repeat center top fixed;
@@ -640,17 +726,56 @@ body section.fifty section article ul li {
   background: #fcfcfc;
   height: 140px;
   margin: 0 10px 10px 0;
-  width: 323px;
-}
-body section.fifty section article ul li a {
   line-height: 140px;
-  width: 100%;
+  width: 323px;
 }
 body section.fifty section article ul li:nth-child(3) {
   margin-right: 0;
 }
 body section.fifty section article ul li:nth-child(6) {
   margin-right: 0;
+}
+body section.fifty section article ul li.buscape {
+  background: url(../image/clients/buscape.jpg) no-repeat 0 0;
+}
+body section.fifty section article ul li.buscape:hover {
+  background-position: 0 -140px;
+}
+body section.fifty section article ul li.limas {
+  background: url(../image/clients/limas.jpg) no-repeat 0 0;
+}
+body section.fifty section article ul li.limas:hover {
+  background-position: 0 -140px;
+}
+body section.fifty section article ul li.ipbca {
+  background: url(../image/clients/ipbca.jpg) no-repeat 0 0;
+}
+body section.fifty section article ul li.ipbca:hover {
+  background-position: 0 -140px;
+}
+body section.fifty section article ul li.acsp {
+  background: url(../image/clients/acsp.jpg) no-repeat 0 0;
+}
+body section.fifty section article ul li.acsp:hover {
+  background-position: 0 -140px;
+}
+body section.fifty section article ul li.karsten {
+  background: url(../image/clients/karsten.jpg) no-repeat 0 0;
+}
+body section.fifty section article ul li.karsten:hover {
+  background-position: 0 -140px;
+}
+body section.fifty section article ul li.cennarium {
+  background: url(../image/clients/cennarium.jpg) no-repeat 0 0;
+}
+body section.fifty section article ul li.cennarium:hover {
+  background-position: 0 -140px;
+}
+body section.fifty section article ul li.winke {
+  background: url(../image/clients/winke.jpg) no-repeat 0 0;
+}
+body section.fifty section article ul li.winke:hover {
+  background-position: 0 -140px;
 }
 body section.fifty section article p {
   color: #fcfcfc;
