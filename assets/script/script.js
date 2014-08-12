@@ -5,22 +5,25 @@ $(function(){
 
     $(document).on('scroll', function () {
         if (offset <= $(window).scrollTop()) {
-            nav.addClass('fixar');
+            nav.addClass('fixar opacity_nav');
             second.css({'margin-top': '86px'});
         } else {
-            nav.removeClass('fixar');
+            nav.removeClass('fixar opacity_nav');
             second.css({'margin-top': '0'});
         }
     });
-});
 
-$.fn.ancora = function(){
-    $('body').animate({scrollTop:$(this).offset().top});
-}
+    $.fn.ancora = function(){
+        $('body').animate({scrollTop:$(this).offset().top});
+    }
 
-$(function(){
-    $('.main a[href^=#]').click(function(){
+    $('.main a[href^=#]').click(function(event){
+        var $target = $(event.target);
+        var $li = $target.parent();
+
         $($(this).attr('href')).ancora();
+        $li.addClass('selected').siblings().removeClass('selected');
+
         return false;
-    })
-})
+    });
+});

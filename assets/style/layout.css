@@ -168,6 +168,11 @@ body .opacity {
   -moz-opacity: 0.90;
   filter: alpha(opacity=90);
 }
+body .opacity_nav {
+  opacity: 0.97;
+  -moz-opacity: 0.97;
+  filter: alpha(opacity=97);
+}
 body .position {
   height: 100%;
   width: 100%;
@@ -330,6 +335,24 @@ body nav.main article ul li a:hover {
 }
 body nav.main article ul li:last-child {
   border-right: solid 1px #363B3F;
+}
+body nav.main article ul .selected {
+  background: #e52667;
+  /* Old browsers */
+  background: -moz-linear-gradient(45deg, #e52667 0%, #e75a41 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left bottom, right top, color-stop(0%, #e52667), color-stop(100%, #e75a41));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(45deg, #e52667 0%, #e75a41 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(45deg, #e52667 0%, #e75a41 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(45deg, #e52667 0%, #e75a41 100%);
+  /* IE10+ */
+  background: linear-gradient(45deg, #e52667 0%, #e75a41 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e52667', endColorstr='#e75a41',GradientType=1 );
+  /* IE6-9 fallback on horizontal gradient */
 }
 body nav.main article a.contact {
   background: #e52667;
@@ -682,8 +705,8 @@ body section.sixth section form textarea {
   margin-bottom: 50px;
   min-height: 150px;
   max-height: 150px;
-  min-width: 100%;
-  max-width: 100%;
+  min-width: 97.5%;
+  max-width: 97.5%;
   padding-left: 20px;
 }
 body section.sixth section form input[type="button"] {
