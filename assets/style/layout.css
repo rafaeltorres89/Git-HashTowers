@@ -64,7 +64,7 @@ body footer ul, body section ul li,
 body nav ul li,
 body footer ul li, body section ul li a,
 body nav ul li a,
-body footer ul li a, body section.first article h1 a, body section.first article ul li, body section.fourth section article .box_50, body section.fourth section article article, body section.fourth section article .our_team, body section.fourth section article .our_team h4, body section.fourth section article .our_team article, body section.fourth section article .our_team article .box_img, body section.sixth section form, body section.sixth section form input[type="text"], body section.sixth section form textarea, body section.sixth section form input[type="button"], body section.seventh section article aside, body section.seventh footer section {
+body footer ul li a, body section.first article h1 a, body section.first article ul li, body section.fourth section article .box_50, body section.fourth section article article, body section.fourth section article .our_team, body section.fourth section article .our_team h4, body section.fourth section article .our_team article, body section.fourth section article .our_team article .box_img, body section.sixth section form, body section.sixth section form input[type="text"], body section.sixth section form textarea, body section.sixth section form input[type="button"], body section.seventh section.clients_world article aside, body section.seventh footer section {
   float: left;
 }
 
@@ -114,7 +114,7 @@ body footer article p strong, body section.sixth section p a {
 
 #TEXT-CENTER, body section article a.btn,
 body nav article a.btn,
-body footer article a.btn, body nav.main article ul li a, body nav.main article a.contact, body section.second article, body section.third article, body section.fourth section article, body section.fourth section.transparent article .box_50, body section.fourth section.block_work ul li a, body section.fifty section article, body section.sixth section article, body section.sixth section form input[type="button"], body section.seventh section article, body section.seventh footer section article ul.ht_info li {
+body footer article a.btn, body nav.main article ul li a, body nav.main article a.contact, body section.second article, body section.third article, body section.fourth section article, body section.fourth section.transparent article .box_50, body section.fourth section.block_work ul li a, body section.fifty section article, body section.sixth section article, body section.sixth section form input[type="button"], body section.seventh section.clients_world article, body section.seventh footer section article ul.ht_info li {
   text-align: center;
 }
 
@@ -124,7 +124,7 @@ body footer article a.btn, body section.first article h1, body section.sixth sec
   position: absolute;
 }
 
-#POSITION-RELATIVE, body section.first article, body section.fourth section article article, body section.sixth section article, body section.seventh section article, body section.seventh footer section article {
+#POSITION-RELATIVE, body section.first article, body section.fourth section article article, body section.sixth section article, body section.seventh section.clients_world article, body section.seventh footer section article {
   position: relative;
 }
 
@@ -884,14 +884,14 @@ body section.seventh {
   background: url(../image/bg-first.jpg) no-repeat center bottom fixed #485673;
   padding: 0;
 }
-body section.seventh section {
+body section.seventh section.clients_world {
   background: #fcfcfc;
 }
-body section.seventh section article h2 {
+body section.seventh section.clients_world article h2 {
   color: #485673;
   margin-bottom: 50px;
 }
-body section.seventh section article aside {
+body section.seventh section.clients_world article aside {
   height: 100%;
   width: 990px;
   margin: 0 auto;
