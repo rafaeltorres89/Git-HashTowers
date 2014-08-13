@@ -12,8 +12,10 @@
     ==========================================================================
 */
 
+    @import "media_queries";
     @import "reset";
     @import "mixin";
+    @import "carrossel";
     @import "animations";
 
 /*  --------------------------------------------------------------------------
@@ -226,65 +228,78 @@
 
         section.first
         {
-            background: url(../image/bg-first.jpg) no-repeat top center $palette-purple;
+            @extend #POSITION-RELATIVE;
+            background: url(../image/bg-first_1.jpg) no-repeat top center #4b5d83;
             height: 1014px;
             padding: 0;
 
+            .boxCustomers { .arrow { @extend #HIDE; } }
+
             article
             {
-                @extend #POSITION-RELATIVE;
+                @extend #POSITION-ABSOLUTE;
+                left: 50%;
+                margin-left: -500px;
+                z-index: 1000;
 
-                h1
+                .content
                 {
-                    @extend #POSITION-ABSOLUTE;
-                    background: url(../image/sprite.png) no-repeat;
-                    height: 342px;
-                    width: 378px;
-                    margin-top: 160px;
-                    z-index: 1000;
+                    @extend #FLOAT-LEFT;
+                    @extend #POSITION-RELATIVE;
+                    @include row;
 
-                    a
+                    h1
                     {
-                        @extend #TEXT-INDENT;
-                        @extend #FLOAT-LEFT;
-                        height: 100%;
-                        width: 100%;
-                    }
-                }
-
-                ul
-                {
-                    @extend #FLOAT-RIGHT;
-                    height: 20px;
-                    margin-top: 50px;
-                    width: 151px;
-
-                    li
-                    {
-                        @extend #FLOAT-LEFT;
-                        background: url(../image/nav.png) no-repeat 0 0;
-                        height: 100%;
-                        margin-right: 20px;
-                        width: 25px;
+                        @extend #POSITION-ABSOLUTE;
+                        background: url(../image/sprite.png) no-repeat;
+                        height: 342px;
+                        width: 378px;
+                        margin-top: 160px;
+                        z-index: 1000;
 
                         a
                         {
                             @extend #TEXT-INDENT;
+                            @extend #FLOAT-LEFT;
+                            height: 100%;
                             width: 100%;
                         }
                     }
 
-                    li:last-child { margin-right: 0; }
+                    ul
+                    {
+                        @extend #FLOAT-RIGHT;
+                        height: 20px;
+                        margin-top: 50px;
+                        width: 151px;
 
-                    li:nth-child(1) { background-position: 0 0; }
-                    li:nth-child(2) { background-position: -25px 0; }
-                    li:nth-child(3) { background-position: -50px 0;   width: 21px; }
-                    li:nth-child(4) { background-position: -71px 0;   width: 20px; }
+                        li
+                        {
+                            @extend #FLOAT-LEFT;
+                            background: url(../image/nav.png) no-repeat 0 0;
+                            height: 100%;
+                            margin-right: 20px;
+                            width: 25px;
 
-                    li:nth-child(1):hover { background-position: 0 -20px; }
-                    li:nth-child(2):hover { background-position: -25px -20px; }
-                    li:nth-child(3):hover { background-position: -50px -20px; }
-                    li:nth-child(4):hover { background-position: -71px -20px; }
+                            a
+                            {
+                                @extend #TEXT-INDENT;
+                                width: 100%;
+                            }
+                        }
+
+                        li:last-child { margin-right: 0; }
+
+                        li:nth-child(1) { background-position: 0 0; }
+                        li:nth-child(2) { background-position: -25px 0; }
+                        li:nth-child(3) { background-position: -50px 0;   width: 21px; }
+                        li:nth-child(4) { background-position: -71px 0;   width: 20px; }
+
+                        li:nth-child(1):hover { background-position: 0 -20px; }
+                        li:nth-child(2):hover { background-position: -25px -20px; }
+                        li:nth-child(3):hover { background-position: -50px -20px; }
+                        li:nth-child(4):hover { background-position: -71px -20px; }
+                    }
                 }
             }
         }
@@ -814,7 +829,7 @@
 
         section.seventh
         {
-            background: url(../image/bg-first.jpg) no-repeat center bottom fixed $palette-purple;
+            background: url(../image/bg-first_3.jpg) no-repeat center bottom fixed $palette-purple;
             padding: 0;
 
             section.clients_world

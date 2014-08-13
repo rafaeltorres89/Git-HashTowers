@@ -1,0 +1,82 @@
+
+/*  ==========================================================================
+    Hash Towers: UI SETTINGS
+    --------------------------------------------------------------------------
+    Version: 1.0;
+    ==========================================================================
+*/
+
+    /* Carrossel
+    ----------------------------------------------------------------------- */
+
+    .boxCustomers
+    {
+        @extend #FLOAT-LEFT;
+        @include row;
+        position: relative;
+
+        .wrapper
+        {
+            @extend #FLOAT-LEFT;
+            @include row;
+            margin: 0 0 0 0;
+            overflow: auto;
+            top: 0;
+
+            ul
+            {
+                @extend #FLOAT-LEFT;
+                @include row;
+                list-style-image: none;
+                list-style-position: outside;
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                width: 9999px;
+
+                li
+                {
+                    @extend #FLOAT-LEFT;
+                    display:block;
+                    margin: 0px 0 0 0;
+                    width: 1024px;
+
+                    img
+                    {
+                        display: block;
+                        height: 1014px;
+                        width: 100%;
+                    }
+                }
+
+                img { border: none; }
+            }
+        }
+
+        .arrow
+        {
+            display: block;
+            background: url(../../image/carousel/sprite-carousel.png) no-repeat 0 0;
+            border: none;
+            cursor: pointer;
+            height: 82px;
+            margin: 259px 0 0 0;
+            position: absolute;
+            text-indent: -5000px;
+            width: 32px;
+        }
+
+        .forward
+        {
+            background-position: -32px 0;
+            right: -45px;
+        }
+        .forward:hover { background-position: -32px -82px; }
+
+        .back
+        {
+            background-position: 0 0;
+            left: -45px;
+        }
+        .back:hover { background-position: 0 -82px; }
+    }

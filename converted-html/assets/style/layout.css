@@ -10,6 +10,51 @@
     SASS includes
     ==========================================================================
 */
+/*  ==========================================================================
+    Hash Towers: UI SETTINGS
+    --------------------------------------------------------------------------
+    Version: 1.0;
+    ==========================================================================
+*/
+/* Media Queries
+----------------------------------------------------------------------- */
+@media (min-width: 990px) and (max-width: 1024px) {
+  body section.first .boxCustomers .wrapper ul li.li_first {
+    display: none;
+  }
+}
+@media (min-width: 1025px) and (max-width: 1280px) {
+  body section.first .boxCustomers .wrapper ul {
+    width: 9999px;
+  }
+  body section.first .boxCustomers .wrapper ul li {
+    width: 1280px;
+  }
+  body section.first .boxCustomers .wrapper ul li.li_first {
+    display: none;
+  }
+}
+@media (min-width: 1281px) and (max-width: 1600px) {
+  body section.first .boxCustomers .wrapper ul {
+    width: 9999px;
+  }
+  body section.first .boxCustomers .wrapper ul li {
+    width: 1600px;
+  }
+}
+@media (min-width: 1601px) and (max-width: 1920px) {
+  body section.first .boxCustomers .wrapper ul {
+    width: 9999px;
+  }
+  body section.first .boxCustomers .wrapper ul li {
+    width: 1920px;
+  }
+}
+@media (min-width: 1921px) {
+  body section.first .boxCustomers {
+    display: none;
+  }
+}
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
   margin: 0;
   padding: 0;
@@ -36,6 +81,81 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     Version: 1.0;
     ==========================================================================
 */
+/* Carrossel
+----------------------------------------------------------------------- */
+.boxCustomers {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+.boxCustomers .wrapper {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  margin: 0 0 0 0;
+  overflow: auto;
+  top: 0;
+}
+.boxCustomers .wrapper ul {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  list-style-image: none;
+  list-style-position: outside;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 9999px;
+}
+.boxCustomers .wrapper ul li {
+  display: block;
+  margin: 0px 0 0 0;
+  width: 1024px;
+}
+.boxCustomers .wrapper ul li img {
+  display: block;
+  height: 1014px;
+  width: 100%;
+}
+.boxCustomers .wrapper ul img {
+  border: none;
+}
+.boxCustomers .arrow {
+  display: block;
+  background: url(../../image/carousel/sprite-carousel.png) no-repeat 0 0;
+  border: none;
+  cursor: pointer;
+  height: 82px;
+  margin: 259px 0 0 0;
+  position: absolute;
+  text-indent: -5000px;
+  width: 32px;
+}
+.boxCustomers .forward {
+  background-position: -32px 0;
+  right: -45px;
+}
+.boxCustomers .forward:hover {
+  background-position: -32px -82px;
+}
+.boxCustomers .back {
+  background-position: 0 0;
+  left: -45px;
+}
+.boxCustomers .back:hover {
+  background-position: 0 -82px;
+}
+
+/*  ==========================================================================
+    Hash Towers: UI SETTINGS
+    --------------------------------------------------------------------------
+    Version: 1.0;
+    ==========================================================================
+*/
 /* Animations
 ----------------------------------------------------------------------- */
 /*  --------------------------------------------------------------------------
@@ -50,7 +170,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 */
 /* Settings
 ----------------------------------------------------------------------- */
-#FLOAT-LEFT, body .position, body section,
+#FLOAT-LEFT, .boxCustomers, .boxCustomers .wrapper, .boxCustomers .wrapper ul, .boxCustomers .wrapper ul li, body .position, body section,
 body nav,
 body footer, body section article .language,
 body nav article .language,
@@ -64,15 +184,15 @@ body footer ul, body section ul li,
 body nav ul li,
 body footer ul li, body section ul li a,
 body nav ul li a,
-body footer ul li a, body section.first article h1 a, body section.first article ul li, body section.fourth section article .box_50, body section.fourth section article article, body section.fourth section article .our_team, body section.fourth section article .our_team h4, body section.fourth section article .our_team article, body section.fourth section article .our_team article .box_img, body section.sixth section form, body section.sixth section form input[type="text"], body section.sixth section form textarea, body section.sixth section form input[type="button"], body section.seventh section.clients_world article aside, body section.seventh footer section {
+body footer ul li a, body section.first article .content, body section.first article .content h1 a, body section.first article .content ul li, body section.fourth section article .box_50, body section.fourth section article article, body section.fourth section article .our_team, body section.fourth section article .our_team h4, body section.fourth section article .our_team article, body section.fourth section article .our_team article .box_img, body section.sixth section form, body section.sixth section form input[type="text"], body section.sixth section form textarea, body section.sixth section form input[type="button"], body section.seventh section.clients_world article aside, body section.seventh footer section {
   float: left;
 }
 
-#FLOAT-RIGHT, body nav.main article a.contact, body section.first article ul, body section.seventh footer section article ul.networks, body section.seventh footer section article p {
+#FLOAT-RIGHT, body nav.main article a.contact, body section.first article .content ul, body section.seventh footer section article ul.networks, body section.seventh footer section article p {
   float: right;
 }
 
-#HIDE {
+#HIDE, body section.first .boxCustomers .arrow {
   display: none;
 }
 
@@ -108,7 +228,7 @@ body footer article p strong, body section.sixth section p a {
   text-decoration: none;
 }
 
-#TEXT-INDENT, body section.first article h1 a, body section.first article ul li a, body section.third article ul li a, body section.seventh footer section article ul.networks li a {
+#TEXT-INDENT, body section.first article .content h1 a, body section.first article .content ul li a, body section.third article ul li a, body section.seventh footer section article ul.networks li a {
   text-indent: -9999px;
 }
 
@@ -120,11 +240,11 @@ body footer article a.btn, body nav.main article ul li a, body nav.main article 
 
 #POSITION-ABSOLUTE, body .position, body section article a.btn,
 body nav article a.btn,
-body footer article a.btn, body section.first article h1, body section.sixth section p, body section.seventh footer section article p {
+body footer article a.btn, body section.first article, body section.first article .content h1, body section.sixth section p, body section.seventh footer section article p {
   position: absolute;
 }
 
-#POSITION-RELATIVE, body section.first article, body section.fourth section article article, body section.sixth section article, body section.seventh section.clients_world article, body section.seventh footer section article {
+#POSITION-RELATIVE, body section.first, body section.first article .content, body section.fourth section article article, body section.sixth section article, body section.seventh section.clients_world article, body section.seventh footer section article {
   position: relative;
 }
 
@@ -381,62 +501,73 @@ body nav.main article a.contact:hover {
   background: #e75a40;
 }
 body section.first {
-  background: url(../image/bg-first.jpg) no-repeat top center #485673;
+  background: url(../image/bg-first_1.jpg) no-repeat top center #4b5d83;
   height: 1014px;
   padding: 0;
 }
-body section.first article h1 {
+body section.first article {
+  left: 50%;
+  margin-left: -500px;
+  z-index: 1000;
+}
+body section.first article .content {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+body section.first article .content h1 {
   background: url(../image/sprite.png) no-repeat;
   height: 342px;
   width: 378px;
   margin-top: 160px;
   z-index: 1000;
 }
-body section.first article h1 a {
+body section.first article .content h1 a {
   height: 100%;
   width: 100%;
 }
-body section.first article ul {
+body section.first article .content ul {
   height: 20px;
   margin-top: 50px;
   width: 151px;
 }
-body section.first article ul li {
+body section.first article .content ul li {
   background: url(../image/nav.png) no-repeat 0 0;
   height: 100%;
   margin-right: 20px;
   width: 25px;
 }
-body section.first article ul li a {
+body section.first article .content ul li a {
   width: 100%;
 }
-body section.first article ul li:last-child {
+body section.first article .content ul li:last-child {
   margin-right: 0;
 }
-body section.first article ul li:nth-child(1) {
+body section.first article .content ul li:nth-child(1) {
   background-position: 0 0;
 }
-body section.first article ul li:nth-child(2) {
+body section.first article .content ul li:nth-child(2) {
   background-position: -25px 0;
 }
-body section.first article ul li:nth-child(3) {
+body section.first article .content ul li:nth-child(3) {
   background-position: -50px 0;
   width: 21px;
 }
-body section.first article ul li:nth-child(4) {
+body section.first article .content ul li:nth-child(4) {
   background-position: -71px 0;
   width: 20px;
 }
-body section.first article ul li:nth-child(1):hover {
+body section.first article .content ul li:nth-child(1):hover {
   background-position: 0 -20px;
 }
-body section.first article ul li:nth-child(2):hover {
+body section.first article .content ul li:nth-child(2):hover {
   background-position: -25px -20px;
 }
-body section.first article ul li:nth-child(3):hover {
+body section.first article .content ul li:nth-child(3):hover {
   background-position: -50px -20px;
 }
-body section.first article ul li:nth-child(4):hover {
+body section.first article .content ul li:nth-child(4):hover {
   background-position: -71px -20px;
 }
 body section.second {
@@ -881,7 +1012,7 @@ body section.sixth section p a:hover {
   text-decoration: underline;
 }
 body section.seventh {
-  background: url(../image/bg-first.jpg) no-repeat center bottom fixed #485673;
+  background: url(../image/bg-first_3.jpg) no-repeat center bottom fixed #485673;
   padding: 0;
 }
 body section.seventh section.clients_world {
