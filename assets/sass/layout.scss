@@ -596,51 +596,59 @@
                     }
 
                     li:nth-child(1),
-                    li:nth-child(5),
-                    li:nth-child(9),
-                    li:nth-child(13)
+                    li:nth-child(8),
+                    li:nth-child(14)
                     { background: url(../image/project/limas.jpg) no-repeat; }
 
                     li:nth-child(1):hover,
-                    li:nth-child(5):hover,
-                    li:nth-child(9):hover,
-                    li:nth-child(13):hover
-                    { background-position: 0 -180px; }
-
-                    li:nth-child(2),
-                    li:nth-child(6),
-                    li:nth-child(10),
-                    li:nth-child(14)
-                    { background: url(../image/project/fapesp.jpg) no-repeat; }
-
-                    li:nth-child(2):hover,
-                    li:nth-child(6):hover,
-                    li:nth-child(10):hover,
+                    li:nth-child(8):hover,
                     li:nth-child(14):hover
                     { background-position: 0 -180px; }
 
-                    li:nth-child(3),
+                    li:nth-child(2),
                     li:nth-child(7),
-                    li:nth-child(11),
                     li:nth-child(15)
-                    { background: url(../image/project/polishop.jpg) no-repeat; }
+                    { background: url(../image/project/fapesp.jpg) no-repeat; }
 
-                    li:nth-child(3):hover,
+                    li:nth-child(2):hover,
                     li:nth-child(7):hover,
-                    li:nth-child(11):hover,
                     li:nth-child(15):hover
                     { background-position: 0 -180px; }
 
-                    li:nth-child(4),
-                    li:nth-child(8),
-                    li:nth-child(12),
+                    li:nth-child(3),
+                    li:nth-child(10),
                     li:nth-child(16)
+                    { background: url(../image/project/polishop.jpg) no-repeat; }
+
+                    li:nth-child(3):hover,
+                    li:nth-child(10):hover,
+                    li:nth-child(16):hover
+                    { background-position: 0 -180px; }
+
+                    li:nth-child(4),
+                    li:nth-child(11)
                     { background: url(../image/project/ipbca.jpg) no-repeat; }
 
                     li:nth-child(4):hover,
-                    li:nth-child(8):hover,
-                    li:nth-child(12):hover,
-                    li:nth-child(16):hover
+                    li:nth-child(11):hover
+                    { background-position: 0 -180px; }
+
+                    li:nth-child(5),
+                    li:nth-child(12)
+                    { background: url(../image/project/zumba.jpg) no-repeat; }
+
+                    li:nth-child(5):hover,
+                    li:nth-child(12):hover
+                    { background-position: 0 -180px; }
+
+                    li:nth-child(6),
+                    li:nth-child(9),
+                    li:nth-child(13)
+                    { background: url(../image/project/anamup.jpg) no-repeat; }
+
+                    li:nth-child(6):hover,
+                    li:nth-child(9):hover,
+                    li:nth-child(13):hover
                     { background-position: 0 -180px; }
                 }
             }

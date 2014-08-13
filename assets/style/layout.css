@@ -788,51 +788,59 @@ body section.fourth section.block_work ul li a {
   width: 100%;
 }
 body section.fourth section.block_work ul li:nth-child(1),
-body section.fourth section.block_work ul li:nth-child(5),
-body section.fourth section.block_work ul li:nth-child(9),
-body section.fourth section.block_work ul li:nth-child(13) {
+body section.fourth section.block_work ul li:nth-child(8),
+body section.fourth section.block_work ul li:nth-child(14) {
   background: url(../image/project/limas.jpg) no-repeat;
 }
 body section.fourth section.block_work ul li:nth-child(1):hover,
-body section.fourth section.block_work ul li:nth-child(5):hover,
-body section.fourth section.block_work ul li:nth-child(9):hover,
-body section.fourth section.block_work ul li:nth-child(13):hover {
-  background-position: 0 -180px;
-}
-body section.fourth section.block_work ul li:nth-child(2),
-body section.fourth section.block_work ul li:nth-child(6),
-body section.fourth section.block_work ul li:nth-child(10),
-body section.fourth section.block_work ul li:nth-child(14) {
-  background: url(../image/project/fapesp.jpg) no-repeat;
-}
-body section.fourth section.block_work ul li:nth-child(2):hover,
-body section.fourth section.block_work ul li:nth-child(6):hover,
-body section.fourth section.block_work ul li:nth-child(10):hover,
+body section.fourth section.block_work ul li:nth-child(8):hover,
 body section.fourth section.block_work ul li:nth-child(14):hover {
   background-position: 0 -180px;
 }
-body section.fourth section.block_work ul li:nth-child(3),
+body section.fourth section.block_work ul li:nth-child(2),
 body section.fourth section.block_work ul li:nth-child(7),
-body section.fourth section.block_work ul li:nth-child(11),
 body section.fourth section.block_work ul li:nth-child(15) {
-  background: url(../image/project/polishop.jpg) no-repeat;
+  background: url(../image/project/fapesp.jpg) no-repeat;
 }
-body section.fourth section.block_work ul li:nth-child(3):hover,
+body section.fourth section.block_work ul li:nth-child(2):hover,
 body section.fourth section.block_work ul li:nth-child(7):hover,
-body section.fourth section.block_work ul li:nth-child(11):hover,
 body section.fourth section.block_work ul li:nth-child(15):hover {
   background-position: 0 -180px;
 }
-body section.fourth section.block_work ul li:nth-child(4),
-body section.fourth section.block_work ul li:nth-child(8),
-body section.fourth section.block_work ul li:nth-child(12),
+body section.fourth section.block_work ul li:nth-child(3),
+body section.fourth section.block_work ul li:nth-child(10),
 body section.fourth section.block_work ul li:nth-child(16) {
+  background: url(../image/project/polishop.jpg) no-repeat;
+}
+body section.fourth section.block_work ul li:nth-child(3):hover,
+body section.fourth section.block_work ul li:nth-child(10):hover,
+body section.fourth section.block_work ul li:nth-child(16):hover {
+  background-position: 0 -180px;
+}
+body section.fourth section.block_work ul li:nth-child(4),
+body section.fourth section.block_work ul li:nth-child(11) {
   background: url(../image/project/ipbca.jpg) no-repeat;
 }
 body section.fourth section.block_work ul li:nth-child(4):hover,
-body section.fourth section.block_work ul li:nth-child(8):hover,
-body section.fourth section.block_work ul li:nth-child(12):hover,
-body section.fourth section.block_work ul li:nth-child(16):hover {
+body section.fourth section.block_work ul li:nth-child(11):hover {
+  background-position: 0 -180px;
+}
+body section.fourth section.block_work ul li:nth-child(5),
+body section.fourth section.block_work ul li:nth-child(12) {
+  background: url(../image/project/zumba.jpg) no-repeat;
+}
+body section.fourth section.block_work ul li:nth-child(5):hover,
+body section.fourth section.block_work ul li:nth-child(12):hover {
+  background-position: 0 -180px;
+}
+body section.fourth section.block_work ul li:nth-child(6),
+body section.fourth section.block_work ul li:nth-child(9),
+body section.fourth section.block_work ul li:nth-child(13) {
+  background: url(../image/project/anamup.jpg) no-repeat;
+}
+body section.fourth section.block_work ul li:nth-child(6):hover,
+body section.fourth section.block_work ul li:nth-child(9):hover,
+body section.fourth section.block_work ul li:nth-child(13):hover {
   background-position: 0 -180px;
 }
 body section.fifty {
