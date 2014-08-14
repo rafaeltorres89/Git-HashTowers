@@ -202,12 +202,16 @@
                             padding: 0 30px;
                         }
 
-                        a:hover { background: $palette-pink; }
+                        a:hover
+                        {
+                            @include backCollor;
+                            background: $palette-pink;
+                        }
                     }
 
                     li:last-child { border-right: solid 1px #363B3F; }
 
-                    .selected { @include gradiente }
+                    .selected { @include gradiente; }
                 }
 
                 a.contact
@@ -348,7 +352,7 @@
 
                     li
                     {
-                        background: url(../image/servicos.jpg) 0 0 no-repeat;
+                        background: url(../image/servicos.jpg) 0 0 no-repeat #f3f3f3;
                         height: 172px;
                         margin: 0 10px 10px 0;
                         width: 240px;
@@ -360,29 +364,71 @@
                         }
                     }
 
+                    // li:hover { @include fadeIn; }
+
                     li:nth-child(1) { background-position: -720px -344px; }
-                    li:nth-child(1):hover { background-position: -720px -516px; }
+                    li:nth-child(1):hover
+                    {
+                        background-position: -720px -516px;
+
+                        @include bg_service-IOS;
+                    }
 
                     li:nth-child(2) { background-position: 0 0; }
-                    li:nth-child(2):hover { background-position: 0 -172px; }
+                    li:nth-child(2):hover
+                    {
+                        background-position: 0 -172px;
+
+                        @include bg_service-ANDROID;
+                    }
 
                     li:nth-child(3) { background-position: -240px 0; }
-                    li:nth-child(3):hover { background-position: -240px -172px; }
+                    li:nth-child(3):hover
+                    {
+                        background-position: -240px -172px;
+
+                        @include bg_service-WEB;
+                    }
 
                     li:nth-child(4) { background-position: -480px 0;    margin-right: 0; }
-                    li:nth-child(4):hover { background-position: -480px -172px; }
+                    li:nth-child(4):hover
+                    {
+                        background-position: -480px -172px;
+
+                        @include bg_service-BACKEND;
+                    }
 
                     li:nth-child(5) { background-position: 0 -344px; }
-                    li:nth-child(5):hover { background-position: 0 -516px; }
+                    li:nth-child(5):hover
+                    {
+                        background-position: 0 -516px;
+
+                        @include bg_service-UX;
+                    }
 
                     li:nth-child(6) { background-position: -240px -344px; }
-                    li:nth-child(6):hover { background-position: -240px -516px; }
+                    li:nth-child(6):hover
+                    {
+                        background-position: -240px -516px;
+
+                        @include bg_service-DESIGN;
+                    }
 
                     li:nth-child(7) { background-position: -480px -344px; }
-                    li:nth-child(7):hover { background-position: -480px -516px; }
+                    li:nth-child(7):hover
+                    {
+                        background-position: -480px -516px;
+
+                        @include bg_service-CONSULTING;
+                    }
 
                     li:nth-child(8) { background-position: -720px 0;    margin-right: 0; }
-                    li:nth-child(8):hover { background-position: -720px -172px; }
+                    li:nth-child(8):hover
+                    {
+                        background-position: -720px -172px;
+
+                        @include bg_service-STARTUP;
+                    }
                 }
             }
         }
@@ -587,12 +633,6 @@
                             line-height: 180px;
                             width: 100%;
                         }
-
-                        // a:hover
-                        // {
-                        //     @include gradiente;
-                        //     @include opacidade;
-                        // }
                     }
 
                     li:nth-child(1),
@@ -650,6 +690,8 @@
                     li:nth-child(9):hover,
                     li:nth-child(13):hover
                     { background-position: 0 -180px; }
+
+                    li:hover { @include fadeIn; }
                 }
             }
         }
@@ -688,6 +730,8 @@
                             line-height: 140px;
                             width: 323px;
                         }
+
+                        li:hover { @include fadeIn; }
 
                         li:nth-child(3) { margin-right: 0; }
                         li:nth-child(6) { margin-right: 0; }

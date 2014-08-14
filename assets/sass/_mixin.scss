@@ -54,3 +54,72 @@
         -moz-opacity: 0.90;
         filter: alpha(opacity=90);
     }
+
+
+    /* ============================ Animações ============================== */
+
+    /* Servíço
+    ------------------------------------------------------------------------ */
+        //IOS
+        @mixin bg_service-IOS {
+            -webkit-animation: bg_service-IOS 0.4s;
+            animation: bg_service-IOS 0.4s;
+        }
+
+        //ANDROID
+        @mixin bg_service-ANDROID {
+            -webkit-animation: bg_service-ANDROID 0.4s;
+            animation: bg_service-ANDROID 0.4s;
+        }
+
+        //WEB
+        @mixin bg_service-WEB {
+            -webkit-animation: bg_service-WEB 0.4s;
+            animation: bg_service-WEB 0.4s;
+        }
+
+        //BACKEND
+        @mixin bg_service-BACKEND {
+            -webkit-animation: bg_service-BACKEND 0.4s;
+            animation: bg_service-BACKEND 0.4s;
+        }
+
+        //UX
+        @mixin bg_service-UX {
+            -webkit-animation: bg_service-UX 0.4s;
+            animation: bg_service-UX 0.4s;
+        }
+
+        //DESIGN
+        @mixin bg_service-DESIGN {
+            -webkit-animation: bg_service-DESIGN 0.4s;
+            animation: bg_service-DESIGN 0.4s;
+        }
+
+        //CONSULTING
+        @mixin bg_service-CONSULTING {
+            -webkit-animation: bg_service-CONSULTING 0.4s;
+            animation: bg_service-CONSULTING 0.4s;
+        }
+
+        //STARTUP
+        @mixin bg_service-STARTUP {
+            -webkit-animation: bg_service-STARTUP 0.4s;
+            animation: bg_service-STARTUP 0.4s;
+        }
+
+    //NAV
+    @mixin backCollor {
+        -webkit-animation: backCollor 1s;
+        animation: backCollor 1s;
+    }
+
+    /* FadeIn
+    ------------------------------------------------------------------------ */
+        //FadeIn
+        @mixin fadeIn {
+            -webkit-animation: fadeIn 0.3s ease-in-out;
+            -moz-animation: fadeIn 0.3s ease-in-out;
+            -o-animation: fadeIn 0.3s ease-in-out;
+            animation: fadeIn 0.3s ease-in-out;
+        }

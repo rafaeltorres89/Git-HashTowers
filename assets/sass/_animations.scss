@@ -9,4 +9,127 @@
     /* Animations
     ----------------------------------------------------------------------- */
 
-    //FadeIn
+    /* Servíço
+    ======================================================================= */
+        //IOS
+        @-webkit-keyframes bg_service-IOS {
+            from    { background-position: -720px -344px; }
+            to      { background-position: -720px -516px; }
+        }
+
+        @keyframes bg_service-IOS {
+            from    { background-position: -720px -344px; }
+            to      { background-position: -720px -516px; }
+        }
+
+        //ANDROID
+        @-webkit-keyframes bg_service-ANDROID {
+            from    { background-position: 0 0; }
+            to      { background-position: 0 -172px; }
+        }
+
+        @keyframes bg_service-ANDROID {
+            from    { background-position: 0 0; }
+            to      { background-position: 0 -172px; }
+        }
+
+        //WEB
+        @-webkit-keyframes bg_service-WEB {
+            from    { background-position: -240px 0; }
+            to      { background-position: -240px -172px; }
+        }
+
+        @keyframes bg_service-WEB {
+            from    { background-position: -240px 0; }
+            to      { background-position: -240px -172px; }
+        }
+
+        //BACKEND
+        @-webkit-keyframes bg_service-BACKEND {
+            from    { background-position: -480px 0; }
+            to      { background-position: -480px -172px; }
+        }
+
+        @keyframes bg_service-BACKEND {
+            from    { background-position: -480px 0; }
+            to      { background-position: -480px -172px; }
+        }
+
+        //UX
+        @-webkit-keyframes bg_service-UX {
+            from    { background-position: 0 -344px; }
+            to      { background-position: 0 -516px; }
+        }
+
+        @keyframes bg_service-UX {
+            from    { background-position: 0 -344px; }
+            to      { background-position: 0 -516px; }
+        }
+
+        //DESIGN
+        @-webkit-keyframes bg_service-DESIGN {
+            from    { background-position: -240px -344px; }
+            to      { background-position: -240px -516px; }
+        }
+
+        @keyframes bg_service-DESIGN {
+            from    { background-position: -240px -344px; }
+            to      { background-position: -240px -516px; }
+        }
+
+        //CONSULTING
+        @-webkit-keyframes bg_service-CONSULTING {
+            from    { background-position: -480px -344px; }
+            to      { background-position: -480px -516px; }
+        }
+
+        @keyframes bg_service-CONSULTING {
+            from    { background-position: -480px -344px; }
+            to      { background-position: -480px -516px; }
+        }
+
+        //STARTUP
+        @-webkit-keyframes bg_service-STARTUP {
+            from    { background-position: -720px 0; }
+            to      { background-position: -720px -172px; }
+        }
+
+        @keyframes bg_service-STARTUP {
+            from    { background-position: -720px 0; }
+            to      { background-position: -720px -172px; }
+        }
+
+
+    /* FadeIn
+    ======================================================================= */
+        //ALL
+        @-webkit-keyframes fadeIn {
+            0%      { opacity: 0.5; }
+            100%    { opacity: 1; }
+        }
+
+        @-moz-keyframes fadeIn {
+            0%      { opacity: 0.5;}
+            100%    { opacity: 1; }
+        }
+
+        @-o-keyframes fadeIn {
+            0%      { opacity: 0.5; }
+            100%    { opacity: 1; }
+        }
+
+        @keyframes fadeIn {
+            0%      { opacity: 0.5; }
+            100%    { opacity: 1; }
+        }
+
+        //NAV
+        @-webkit-keyframes backCollor {
+            from    { background: #000000; }
+            to      { background: #E32666; }
+        }
+
+        @keyframes backCollor {
+            from    { background: #000000; }
+            to      { background: #E32666; }
+        }
