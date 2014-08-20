@@ -14,6 +14,68 @@
         body { section.first { .boxCustomers { .wrapper { ul { li.li_first { display: none; } } } } } }
     }
 
+    //Entre 1281 - 1599
+    @media (max-width: 1280px) {
+        body
+        {
+            section.more-project
+            {
+                article
+                {
+                    width: 990px !important;
+
+                    ul
+                    {
+                        li
+                        {
+                            height: 215px !important;   width: 215px !important;
+                            margin: 6px !important;
+                            padding: 10px !important;
+
+                            p
+                            {
+                                font-size: 25px !important;
+                                line-height: 20px !important;
+
+                                em
+                                {
+                                    font-size: 15px !important;
+                                }
+                            }
+                        }
+
+                        li:hover
+                        {
+                            .btn_plus
+                            {
+                                height: 40px !important;    width: 190px !important;
+                                left: 50% !important;  top: 50% !important;
+                                margin: -20px 0 0 -95px !important;
+
+                                a
+                                {
+                                    font-size: 14px !important;
+                                    height: 40px !important;   width: 90px !important;
+                                    line-height: 40px !important;
+                                    margin: 0 1px !important;
+                                }
+                            }
+                        }
+
+                        .img_project
+                        {
+                            height: 135px !important;  width: 215px !important;
+                            margin-top: 20px !important;
+
+                            img.default     { display: block !important; }
+                            img.wide        { display: none !important; }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
     //Entre 1025 - 1280
     @media (min-width: 1025px) and (max-width: 1280px) {
         body
@@ -31,6 +93,39 @@
                             li { width: 1280px; }
 
                             li.li_first { display: none; }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    //Entre 1281 - 1599
+    @media (min-width: 1281px) and (max-width: 1599px) {
+        body
+        {
+            section.more-project
+            {
+                article
+                {
+                    width: 1280px !important;
+
+                    ul
+                    {
+                        li
+                        {
+                            height: 280px !important;   width: 280px !important;
+                            margin: 5px!important;
+                            padding: 15px!important;
+                        }
+
+                        .img_project
+                        {
+                            height: 122px !important;  width: 215px !important;
+                            margin-top: 40px !important;
+
+                            img.default     { display: block !important; }
+                            img.wide        { display: none !important; }
                         }
                     }
                 }

@@ -1,15 +1,18 @@
 $(function(){
     var nav = $('#nav');
     var second = $('.second');
+    var more_project = $('.more-project');
     var offset = nav.offset().top;
 
     $(document).on('scroll', function () {
         if (offset <= $(window).scrollTop()) {
             nav.addClass('fixar opacity_nav');
             second.css({'margin-top': '86px'});
+            more_project.css({'margin-top': '86px'});
         } else {
             nav.removeClass('fixar opacity_nav');
             second.css({'margin-top': '0'});
+            more_project.css({'margin-top': '0'});
         }
     });
 

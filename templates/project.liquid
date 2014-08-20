@@ -1,0 +1,34 @@
+{% block content %}
+    <header>
+        <article>
+            {% include "h1" %}
+            {% include "socialmedia" %}
+        </article>
+    </header>
+    <nav class="main" id="nav">
+        <article>
+            <ul>
+                <li><a href="./#home" title=""><img src="../assets/image/home.png" alt="" border="0"/></a></li>
+                <li><a href="./#service" title="">service</a></li>
+                <li><a href="./#aboutUs" title="">about us</a></li>
+                <li><a href="./#jobs" title="">jobs</a></li>
+                <li><a href="./#clients" title="">clients</a></li>
+                <li><a href="./#more" title="">and more</a></li>
+            </ul>
+            <a href="./#contact" title="" class="contact">contact</a>
+        </article>
+    </nav>
+    <section class="more-project">
+        <article>
+            <ul>
+                {% include "lista-project" %}
+            </ul>
+        </article>
+    </section>
+    <footer class="project">
+        <article>
+            {% include "socialmedia" %}
+            {% include "copyright" %}
+        </article>
+    </footer>
+{% endblock %}

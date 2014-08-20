@@ -24,6 +24,49 @@
     display: none;
   }
 }
+@media (max-width: 1280px) {
+  body section.more-project article {
+    width: 990px !important;
+  }
+  body section.more-project article ul li {
+    height: 215px !important;
+    width: 215px !important;
+    margin: 6px !important;
+    padding: 10px !important;
+  }
+  body section.more-project article ul li p {
+    font-size: 25px !important;
+    line-height: 20px !important;
+  }
+  body section.more-project article ul li p em {
+    font-size: 15px !important;
+  }
+  body section.more-project article ul li:hover .btn_plus {
+    height: 40px !important;
+    width: 190px !important;
+    left: 50% !important;
+    top: 50% !important;
+    margin: -20px 0 0 -95px !important;
+  }
+  body section.more-project article ul li:hover .btn_plus a {
+    font-size: 14px !important;
+    height: 40px !important;
+    width: 90px !important;
+    line-height: 40px !important;
+    margin: 0 1px !important;
+  }
+  body section.more-project article ul .img_project {
+    height: 135px !important;
+    width: 215px !important;
+    margin-top: 20px !important;
+  }
+  body section.more-project article ul .img_project img.default {
+    display: block !important;
+  }
+  body section.more-project article ul .img_project img.wide {
+    display: none !important;
+  }
+}
 @media (min-width: 1025px) and (max-width: 1280px) {
   body section.first .boxCustomers .wrapper ul {
     width: 9999px;
@@ -33,6 +76,28 @@
   }
   body section.first .boxCustomers .wrapper ul li.li_first {
     display: none;
+  }
+}
+@media (min-width: 1281px) and (max-width: 1599px) {
+  body section.more-project article {
+    width: 1280px !important;
+  }
+  body section.more-project article ul li {
+    height: 280px !important;
+    width: 280px !important;
+    margin: 5px !important;
+    padding: 15px !important;
+  }
+  body section.more-project article ul .img_project {
+    height: 122px !important;
+    width: 215px !important;
+    margin-top: 40px !important;
+  }
+  body section.more-project article ul .img_project img.default {
+    display: block !important;
+  }
+  body section.more-project article ul .img_project img.wide {
+    display: none !important;
   }
 }
 @media (min-width: 1281px) and (max-width: 1600px) {
@@ -330,7 +395,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 ======================================================================= */
 @-webkit-keyframes fadeIn {
   0% {
-    opacity: 0.5;
+    opacity: 0.2;
   }
 
   100% {
@@ -340,7 +405,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 
 @-moz-keyframes fadeIn {
   0% {
-    opacity: 0.5;
+    opacity: 0.2;
   }
 
   100% {
@@ -350,7 +415,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 
 @-o-keyframes fadeIn {
   0% {
-    opacity: 0.5;
+    opacity: 0.2;
   }
 
   100% {
@@ -360,7 +425,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 
 @keyframes fadeIn {
   0% {
-    opacity: 0.5;
+    opacity: 0.2;
   }
 
   100% {
@@ -400,45 +465,63 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 */
 /* Settings
 ----------------------------------------------------------------------- */
-#FLOAT-LEFT, .boxCustomers, .boxCustomers .wrapper, .boxCustomers .wrapper ul, .boxCustomers .wrapper ul li, body .position, body section,
+#FLOAT-LEFT, .boxCustomers, .boxCustomers .wrapper, .boxCustomers .wrapper ul, .boxCustomers .wrapper ul li, body .position, body header, body header article h1,
+body footer,
 body nav,
-body footer, body section article .language,
+body section, body header article h1 a,
+body footer article h1 a,
+body nav article h1 a,
+body section article h1 a, body header article .language,
+body footer article .language,
 body nav article .language,
-body footer article .language, body section article .language .ico,
+body section article .language, body header article .language .ico,
+body footer article .language .ico,
 body nav article .language .ico,
-body footer article .language .ico, body section article .language select,
+body section article .language .ico, body header article .language select,
+body footer article .language select,
 body nav article .language select,
-body footer article .language select, body section ul,
+body section article .language select, body header article ul.sm li,
+body footer article ul.sm li,
+body nav article ul.sm li,
+body section article ul.sm li, body header ul,
+body footer ul,
 body nav ul,
-body footer ul, body section ul li,
+body section ul, body header ul li,
+body footer ul li,
 body nav ul li,
-body footer ul li, body section ul li a,
+body section ul li, body header ul li a,
+body footer ul li a,
 body nav ul li a,
-body footer ul li a, body section.first article .content, body section.first article .content h1 a, body section.first article .content ul li, body section.fourth section article .box_50, body section.fourth section article article, body section.fourth section article .our_team, body section.fourth section article .our_team h4, body section.fourth section article .our_team article, body section.fourth section article .our_team article .box_img, body section.sixth section form, body section.sixth section form input[type="text"], body section.sixth section form textarea, body section.sixth section form input[type="button"], body section.seventh section.clients_world article aside, body section.seventh footer section {
+body section ul li a, body section.first article .content, body section.fourth section article .box_50, body section.fourth section article article, body section.fourth section article .our_team, body section.fourth section article .our_team h4, body section.fourth section article .our_team article, body section.fourth section article .our_team article .box_img, body section.sixth section form, body section.sixth section form input[type="text"], body section.sixth section form textarea, body section.sixth section form input[type="button"], body section.seventh section.clients_world article aside, body section.seventh footer section, body section.more-project article ul, body section.more-project article ul li, body footer.project article ul.sm {
   float: left;
 }
 
-#FLOAT-RIGHT, body nav.main article a.contact, body section.first article .content ul, body section.seventh footer section article ul.networks, body section.seventh footer section article p {
+#FLOAT-RIGHT, body header article ul.sm,
+body footer article ul.sm,
+body nav article ul.sm,
+body section article ul.sm, body nav.main article a.contact, body section.seventh footer section article ul.networks, body section.seventh footer section article p, body footer.project article p {
   float: right;
 }
 
-#HIDE, body section.first .boxCustomers .arrow {
+#HIDE, body section.first .boxCustomers .arrow, body section.more-project article ul li .img_project img.default, body section.more-project article ul li .btn_plus {
   display: none;
 }
 
-#SHOW, body section article a.btn,
+#SHOW, body header article a.btn,
+body footer article a.btn,
 body nav article a.btn,
-body footer article a.btn, body section.fourth section.transparent article .box_50 p span.font_light, body section.fourth section.block_work ul li a, body section.sixth section form input[type="button"] {
+body section article a.btn, body section.fourth section.transparent article .box_50 p span.font_light, body section.sixth section form input[type="button"], body section.more-project article ul li .img_project img.wide, body section.more-project article ul li:hover .btn_plus {
   display: block;
 }
 
-#FONT-BOLD, body section article p strong,
+#FONT-BOLD, body header article p strong,
+body footer article p strong,
 body nav article p strong,
-body footer article p strong, body section.sixth section p a {
+body section article p strong, body section.sixth section p a {
   font-weight: bold;
 }
 
-#FONT-ITALIC {
+#FONT-ITALIC, body section.more-project article ul li p em {
   font-style: italic;
 }
 
@@ -454,27 +537,35 @@ body footer article p strong, body section.sixth section p a {
   text-transform: uppercase;
 }
 
-#NO-TEXT-DECORATION, body a, body section.seventh footer section article p a:hover {
+#NO-TEXT-DECORATION, body a, body section.seventh footer section article p a:hover, body footer.project article p a:hover {
   text-decoration: none;
 }
 
-#TEXT-INDENT, body section.first article .content h1 a, body section.first article .content ul li a, body section.third article ul li a, body section.seventh footer section article ul.networks li a {
+#TEXT-INDENT, body header article h1 a,
+body footer article h1 a,
+body nav article h1 a,
+body section article h1 a, body header article ul.sm li a,
+body footer article ul.sm li a,
+body nav article ul.sm li a,
+body section article ul.sm li a, body section.third article ul li, body section.seventh footer section article ul.networks li a {
   text-indent: -9999px;
 }
 
-#TEXT-CENTER, body section article a.btn,
+#TEXT-CENTER, body header article a.btn,
+body footer article a.btn,
 body nav article a.btn,
-body footer article a.btn, body nav.main article ul li a, body nav.main article a.contact, body section.second article, body section.third article, body section.fourth section article, body section.fourth section.transparent article .box_50, body section.fourth section.block_work ul li a, body section.fifty section article, body section.sixth section article, body section.sixth section form input[type="button"], body section.seventh section.clients_world article, body section.seventh footer section article ul.ht_info li {
+body section article a.btn, body nav.main article ul li a, body nav.main article a.contact, body section.second article, body section.third article, body section.fourth section article, body section.fourth section.transparent article .box_50, body section.fifty section article, body section.sixth section article, body section.sixth section form input[type="button"], body section.seventh section.clients_world article, body section.seventh footer section article ul.ht_info li, body section.more-project article ul li, body section.more-project article ul li .img_project, body section.more-project article ul li:hover .btn_plus a {
   text-align: center;
 }
 
-#POSITION-ABSOLUTE, body .position, body section article a.btn,
+#POSITION-ABSOLUTE, body .position, body header article a.btn,
+body footer article a.btn,
 body nav article a.btn,
-body footer article a.btn, body section.first article, body section.first article .content h1, body section.sixth section p, body section.seventh footer section article p {
+body section article a.btn, body section.first article, body section.first article .content h1, body section.sixth section p, body section.seventh footer section article p, body section.more-project article ul li .btn_plus {
   position: absolute;
 }
 
-#POSITION-RELATIVE, body section.first, body section.first article .content, body section.fourth section article article, body section.sixth section article, body section.seventh section.clients_world article, body section.seventh footer section article {
+#POSITION-RELATIVE, body section.first, body section.first article .content, body section.fourth section article article, body section.sixth section article, body section.seventh section.clients_world article, body section.seventh footer section article, body section.more-project, body section.more-project article ul li {
   position: relative;
 }
 
@@ -482,9 +573,10 @@ body footer article a.btn, body section.first article, body section.first articl
   position: fixed;
 }
 
-#OVERFLOW-HIDDEN, body section article .language,
+#OVERFLOW-HIDDEN, body header article .language,
+body footer article .language,
 body nav article .language,
-body footer article .language, body section.fourth section.block_work {
+body section article .language, body section.fourth section.block_work {
   overflow: hidden;
 }
 
@@ -509,6 +601,7 @@ html {
 }
 
 body {
+  background: #fcfcfc;
   color: #888888;
   font-family: "Roboto", Arial, Verdana, sans-serif;
   font-size: 14px;
@@ -545,41 +638,68 @@ body .fixar {
   margin-top: 0px !important;
   z-index: 2000;
 }
-body section,
+body header {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background: #242424;
+  height: 140px;
+  padding: 15px 0 !important;
+}
+body header article h1 {
+  background: url(../image/sprite.png) no-repeat -410px -397px;
+  height: 140px;
+  width: 155px;
+  z-index: 1000;
+}
+body header,
+body footer,
 body nav,
-body footer {
+body section {
   height: 100%;
   width: 100%;
   margin: 0;
   padding: 0;
   padding: 60px 0;
 }
-body section article,
+body header article,
+body footer article,
 body nav article,
-body footer article {
+body section article {
   height: 100%;
   width: 990px;
   margin: 0 auto;
 }
-body section article p,
+body header article h1 a,
+body footer article h1 a,
+body nav article h1 a,
+body section article h1 a {
+  height: 100%;
+  width: 100%;
+}
+body header article p,
+body footer article p,
 body nav article p,
-body footer article p {
+body section article p {
   color: #888888;
   font-family: "Roboto", Arial, Verdana, sans-serif;
   font-size: 14px;
   font-weight: 100;
 }
-body section article h2,
+body header article h2,
+body footer article h2,
 body nav article h2,
-body footer article h2 {
+body section article h2 {
   font-family: "Roboto", Arial, Verdana, sans-serif;
   font-size: 40px;
   font-weight: 300;
   width: 100%;
 }
-body section article a.btn,
+body header article a.btn,
+body footer article a.btn,
 body nav article a.btn,
-body footer article a.btn {
+body section article a.btn {
   background: #fcfcfc;
   border: solid 2px;
   font-family: "Roboto", Arial, Verdana, sans-serif;
@@ -590,9 +710,10 @@ body footer article a.btn {
   text-transform: uppercase;
   width: 200px;
 }
-body section article a.btn:hover,
+body header article a.btn:hover,
+body footer article a.btn:hover,
 body nav article a.btn:hover,
-body footer article a.btn:hover {
+body section article a.btn:hover {
   background: #e52667;
   /* Old browsers */
   background: -moz-linear-gradient(45deg, #e52667 0%, #e75a41 100%);
@@ -611,24 +732,27 @@ body footer article a.btn:hover {
   /* IE6-9 fallback on horizontal gradient */
   color: #fcfcfc !important;
 }
-body section article .language,
+body header article .language,
+body footer article .language,
 body nav article .language,
-body footer article .language {
+body section article .language {
   background: url(../image/seta.png) no-repeat right;
   height: 20px;
   margin-top: 50px;
   width: 178px;
 }
-body section article .language .ico,
+body header article .language .ico,
+body footer article .language .ico,
 body nav article .language .ico,
-body footer article .language .ico {
+body section article .language .ico {
   background: url(../image/sprite.png) -378px 0 no-repeat;
   height: 17px;
   width: 17px;
 }
-body section article .language select,
+body header article .language select,
+body footer article .language select,
 body nav article .language select,
-body footer article .language select {
+body section article .language select {
   font-family: "Open Sans", Arial, Verdana;
   font-size: 15px;
   font-weight: lighter;
@@ -640,23 +764,105 @@ body footer article .language select {
   width: 155px;
   -webkit-appearance: none;
 }
-body section ul,
+body header article ul.sm,
+body footer article ul.sm,
+body nav article ul.sm,
+body section article ul.sm {
+  height: 20px;
+  margin-top: 50px;
+  width: 151px;
+}
+body header article ul.sm li,
+body footer article ul.sm li,
+body nav article ul.sm li,
+body section article ul.sm li {
+  background: url(../image/nav.png) no-repeat 0 0;
+  height: 100%;
+  margin-right: 20px;
+  width: 25px;
+}
+body header article ul.sm li a,
+body footer article ul.sm li a,
+body nav article ul.sm li a,
+body section article ul.sm li a {
+  width: 100%;
+}
+body header article ul.sm li:last-child,
+body footer article ul.sm li:last-child,
+body nav article ul.sm li:last-child,
+body section article ul.sm li:last-child {
+  margin-right: 0;
+}
+body header article ul.sm li:nth-child(1),
+body footer article ul.sm li:nth-child(1),
+body nav article ul.sm li:nth-child(1),
+body section article ul.sm li:nth-child(1) {
+  background-position: 0 0;
+}
+body header article ul.sm li:nth-child(2),
+body footer article ul.sm li:nth-child(2),
+body nav article ul.sm li:nth-child(2),
+body section article ul.sm li:nth-child(2) {
+  background-position: -25px 0;
+}
+body header article ul.sm li:nth-child(3),
+body footer article ul.sm li:nth-child(3),
+body nav article ul.sm li:nth-child(3),
+body section article ul.sm li:nth-child(3) {
+  background-position: -50px 0;
+  width: 21px;
+}
+body header article ul.sm li:nth-child(4),
+body footer article ul.sm li:nth-child(4),
+body nav article ul.sm li:nth-child(4),
+body section article ul.sm li:nth-child(4) {
+  background-position: -71px 0;
+  width: 20px;
+}
+body header article ul.sm li:nth-child(1):hover,
+body footer article ul.sm li:nth-child(1):hover,
+body nav article ul.sm li:nth-child(1):hover,
+body section article ul.sm li:nth-child(1):hover {
+  background-position: 0 -20px;
+}
+body header article ul.sm li:nth-child(2):hover,
+body footer article ul.sm li:nth-child(2):hover,
+body nav article ul.sm li:nth-child(2):hover,
+body section article ul.sm li:nth-child(2):hover {
+  background-position: -25px -20px;
+}
+body header article ul.sm li:nth-child(3):hover,
+body footer article ul.sm li:nth-child(3):hover,
+body nav article ul.sm li:nth-child(3):hover,
+body section article ul.sm li:nth-child(3):hover {
+  background-position: -50px -20px;
+}
+body header article ul.sm li:nth-child(4):hover,
+body footer article ul.sm li:nth-child(4):hover,
+body nav article ul.sm li:nth-child(4):hover,
+body section article ul.sm li:nth-child(4):hover {
+  background-position: -71px -20px;
+}
+body header ul,
+body footer ul,
 body nav ul,
-body footer ul {
+body section ul {
   height: 100%;
   width: 100%;
   margin: 0;
   padding: 0;
   list-style: none;
 }
-body section ul li,
+body header ul li,
+body footer ul li,
 body nav ul li,
-body footer ul li {
+body section ul li {
   margin: 0;
 }
-body section ul li a,
+body header ul li a,
+body footer ul li a,
 body nav ul li a,
-body footer ul li a {
+body section ul li a {
   height: 100%;
   width: 100%;
   margin: 0;
@@ -749,58 +955,11 @@ body section.first article .content {
   padding: 0;
 }
 body section.first article .content h1 {
-  background: url(../image/sprite.png) no-repeat;
+  background: url(../image/sprite.png) no-repeat 0 0;
   height: 342px;
   width: 378px;
   margin-top: 160px;
   z-index: 1000;
-}
-body section.first article .content h1 a {
-  height: 100%;
-  width: 100%;
-}
-body section.first article .content ul {
-  height: 20px;
-  margin-top: 50px;
-  width: 151px;
-}
-body section.first article .content ul li {
-  background: url(../image/nav.png) no-repeat 0 0;
-  height: 100%;
-  margin-right: 20px;
-  width: 25px;
-}
-body section.first article .content ul li a {
-  width: 100%;
-}
-body section.first article .content ul li:last-child {
-  margin-right: 0;
-}
-body section.first article .content ul li:nth-child(1) {
-  background-position: 0 0;
-}
-body section.first article .content ul li:nth-child(2) {
-  background-position: -25px 0;
-}
-body section.first article .content ul li:nth-child(3) {
-  background-position: -50px 0;
-  width: 21px;
-}
-body section.first article .content ul li:nth-child(4) {
-  background-position: -71px 0;
-  width: 20px;
-}
-body section.first article .content ul li:nth-child(1):hover {
-  background-position: 0 -20px;
-}
-body section.first article .content ul li:nth-child(2):hover {
-  background-position: -25px -20px;
-}
-body section.first article .content ul li:nth-child(3):hover {
-  background-position: -50px -20px;
-}
-body section.first article .content ul li:nth-child(4):hover {
-  background-position: -71px -20px;
 }
 body section.second {
   background: #f7f8f8;
@@ -830,9 +989,6 @@ body section.third article ul li {
   height: 172px;
   margin: 0 10px 10px 0;
   width: 240px;
-}
-body section.third article ul li a {
-  width: 100%;
 }
 body section.third article ul li:nth-child(1) {
   background-position: -720px -344px;
@@ -1030,10 +1186,6 @@ body section.fourth section.block_work ul li {
   height: 180px;
   width: 310px;
   background-position: 0 0;
-}
-body section.fourth section.block_work ul li a {
-  line-height: 180px;
-  width: 100%;
 }
 body section.fourth section.block_work ul li:nth-child(1),
 body section.fourth section.block_work ul li:nth-child(8),
@@ -1372,6 +1524,124 @@ body section.seventh footer section article p {
   width: initial;
 }
 body section.seventh footer section article p a {
+  color: #91abd9;
+  font-size: 13px;
+  text-decoration: underline;
+}
+body section.more-project {
+  padding: 10px 0;
+}
+body section.more-project article {
+  background: #f00;
+  width: 1600px;
+}
+body section.more-project article ul {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+}
+body section.more-project article ul li {
+  background: #efeeee;
+  height: 320px;
+  width: 320px;
+  margin: 10px;
+  padding: 30px;
+}
+body section.more-project article ul li p {
+  color: #e75a40;
+  font-family: "Roboto", Arial, Verdana, sans-serif;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 32px;
+}
+body section.more-project article ul li p em {
+  font-size: 25px;
+  font-weight: 100;
+}
+body section.more-project article ul li .img_project {
+  height: 200px;
+  width: 320px;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+body section.more-project article ul li .btn_plus {
+  height: 60px;
+  width: 296px;
+  left: 50%;
+  top: 50%;
+  margin: -30px 0 0 -148px;
+}
+body section.more-project article ul li:hover {
+  background: #e52667;
+  /* Old browsers */
+  background: -moz-linear-gradient(45deg, #e52667 0%, #e75a41 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left bottom, right top, color-stop(0%, #e52667), color-stop(100%, #e75a41));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(45deg, #e52667 0%, #e75a41 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(45deg, #e52667 0%, #e75a41 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(45deg, #e52667 0%, #e75a41 100%);
+  /* IE10+ */
+  background: linear-gradient(45deg, #e52667 0%, #e75a41 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e52667', endColorstr='#e75a41',GradientType=1 );
+  /* IE6-9 fallback on horizontal gradient */
+  opacity: 0.90;
+  -moz-opacity: 0.90;
+  filter: alpha(opacity=90);
+  -webkit-animation: fadeIn 0.3s ease-in-out;
+  -moz-animation: fadeIn 0.3s ease-in-out;
+  -o-animation: fadeIn 0.3s ease-in-out;
+  animation: fadeIn 0.3s ease-in-out;
+}
+body section.more-project article ul li:hover p,
+body section.more-project article ul li:hover .img_project {
+  opacity: 0.20;
+  -moz-opacity: 0.20;
+  filter: alpha(opacity=20);
+}
+body section.more-project article ul li:hover .btn_plus a {
+  background: #fcfcfc;
+  border-radius: 3px;
+  color: #ca3d31;
+  font-family: "Roboto", Arial, Verdana, sans-serif;
+  font-size: 18px;
+  font-weight: 100;
+  height: 60px;
+  width: 142px;
+  line-height: 60px;
+  margin: 0 2px;
+  opacity: 1.00;
+  -moz-opacity: 1.00;
+  filter: alpha(opacity=100);
+}
+body section.more-project article ul li:hover .btn_plus a img {
+  border: none;
+  height: 15px;
+  width: 15px;
+  margin-right: 5px;
+}
+body section.more-project article ul li:hover .btn_plus a:hover {
+  background: #322e2d;
+}
+body footer.project {
+  background: #e32666;
+  padding: 40px 0;
+  margin-top: 50px;
+}
+body footer.project article ul.sm {
+  margin-top: 0;
+}
+body footer.project article p {
+  color: #fcfcfc;
+  font-size: 13px;
+  right: 0;
+  top: 172px;
+  width: initial;
+}
+body footer.project article p a {
   color: #91abd9;
   font-size: 13px;
   text-decoration: underline;
