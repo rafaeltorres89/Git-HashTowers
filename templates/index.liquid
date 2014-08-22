@@ -1,3 +1,11 @@
+{% block scripts_header %}
+<script src="http://code.angularjs.org/1.0.1/angular-1.0.1.min.js"></script>
+{% endblock %}
+
+{% block scripts %}
+<script src="../assets/script/contact.min.js"></script>
+{% endblock %}
+
 {% block content %}
     <section class="first" id="home">
     	<article>
@@ -223,12 +231,13 @@
             <div class="position" id="contact"></div>
             <section class="opacity contact">
                 <article>
-                    <h2>hello</h2>
-                    <form name="nomedoform" method="post" action="">
-                        <input type="text" value="name" name="name" class="name" maxlength="1000" onblur="if(this.value == '') {this.value = 'name';}" onfocus="if(this.value == 'name') {this.value = '';}">
-                        <input type="text" value="email" name="email" class="email" maxlength="1000" onblur="if(this.value == '') {this.value = 'email';}" onfocus="if(this.value == 'email') {this.value = '';}">
-                        <textarea name="mensage" value="mensage" class="mensage" maxlength="1000"></textarea>
-                        <input name="contato" type="button" value="more">
+                    <h2>hello {{ nome }}!</h2>
+                    <form name="form" method="post" action="envia.php">
+                        <input type="text" value="name" ng-model="nome" name="nome" class="mensage" maxlength="1000" placeholder="nome" onfocus="cleanit(this); refresh_nu()">
+                        <input type="text" value="email" ng-model="email" name="email" class="mensage" maxlength="1000" placeholder="email" onfocus="cleanit(this); refresh_nu()" onBlur="ValidaEmail();">
+                        <textarea name="contato" value="mensage" class="mensage" maxlength="1000" placeholder="mensage" onfocus="cleanit(this); refresh_nu()"></textarea>
+                        <input class="btn_form" name="Enviar" type="submit" value="more">
+                        <input class="btn_form" name="Limpar" type="reset" value="clean">
                     </form>
                     <p>
                         give us a call <strong>+55 11 991 065 485</strong><br>

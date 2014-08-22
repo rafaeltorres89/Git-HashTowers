@@ -1,0 +1,26 @@
+{% block metatag %}
+    <meta http-equiv="refresh" content="2; url=./#home">
+{% endblock %}
+
+{% block styles %}
+<style type="text/css">
+    header article p
+    {
+        color: #E32666 !important;
+        font-size: 30px !important;
+        position: absolute !important;
+        margin: 45px 0 0 250px !important;
+    }
+</style>
+{% endblock %}
+
+{% block title %} | Mensagem enviada!{% endblock %}
+
+{% block content %}
+    <header>
+        <article>
+            {% include "h1" %}
+            <p>Sua mensagem foi enviada com sucesso!!!</p>
+        </article>
+    </header>
+{% endblock %}

@@ -2,6 +2,7 @@
 <html lang="en" ng-app>
 <head>
     {% include "metatags" %}
+    {% block metatag %}{% endblock %}
 
     <title>Hash Towers{% block title %}{% endblock %}</title>
     <link rel="shortcut icon" type="image/ico" href="/favicon.ico" />
@@ -9,6 +10,7 @@
     <!-- STYLES -->
     {% include "styles" %}
     {% block styles %}{% endblock %}
+    {% block scripts_header %}{% endblock %}
 </head>
 
 <body>
