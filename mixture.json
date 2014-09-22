@@ -1,25 +1,28 @@
 {
+  "convertHtml": {
+    "default": "index",
+    "relativePaths": false
+  },
   "debug": false,
   "domain": null,
   "lintScripts": false,
   "modelSource": null,
-  "preprocessorLocations": "assets",
+  "preprocessorLocations": [
+    "assets"
+  ],
   "preprocessorScriptOutput": "assets/script",
   "preprocessorStyleOutput": "assets/style",
   "projectDescription": "Website HashTowers.",
   "projectName": "HashTowers",
   "publishedId": null,
+  "sass": {
+    "cache": false
+  },
   "serverHostname": "localhost",
   "serverPort": null,
   "templateDefaultLayout": "layout",
   "templateDefaultPage": "index",
   "templateDirectory": "templates",
   "type": "mixture",
-  "useCompass": true,
-  "sass":
-  {
-    "cache": false
-  },
-  "convertHtmlExtension": null,
-  "convertHtmlDefault": "index"
+  "useCompass": true
 }

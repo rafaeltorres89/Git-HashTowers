@@ -1,0 +1,182 @@
+
+    /* Mobile 999px
+    ----------------------------------------------------------------------- */
+    @media (min-width: 500px) and (max-width: 999px) {
+        body
+        {
+            section,
+            nav.main
+            {
+                display: none;
+
+                article
+                {
+                    width: 100% !important;
+                }
+            }
+
+            header.mobile_section
+            {
+                float: left;
+                background: url(../image/mobile/back_image.jpg) no-repeat;
+                background-size: cover;
+                display: block;
+                padding: 10% 0 !important;
+
+                article
+                {
+                    width: 100%;
+
+                    h1
+                    {
+                        background: url(../image/sprite.png) no-repeat 0 0;
+                        float: none;
+                        height: 342px;
+                        width: 378px;
+                        margin: 0 auto;
+                    }
+
+                    ul.sm
+                    {
+                        float: none;
+                        margin: 0 auto;
+                        margin-top: 9.5%;
+                    }
+                }
+            }
+
+            nav.mobile_nav
+            {
+                position: relative;
+                background: #292b29;
+                border-top: solid 1px #313131;
+                border-bottom: solid 1px #313131;
+                height: 37px;
+                padding: 1.6% 0 !important;
+
+                .plus_mob
+                {
+                    float: left;
+                    background: url(../image/mobile/sprite_mob.jpg) no-repeat 0 0;
+                    height: 37px;
+                    width: 37px;
+                    margin: 0 0 0 25px;
+                    cursor: pointer;
+
+                    p
+                    {
+                        text-transform: uppercase;
+                        margin: 7px 0 0 45px;
+
+                        color: #E75A40;
+                        font-family: "Roboto", Arial, Verdana, sans-serif;
+                        font-size: 20px;
+                        font-weight: 300;
+                    }
+
+                    p:hover { color: #E32666; }
+                }
+
+                .plus_mob:hover { background: url(../image/mobile/sprite_mob.jpg) no-repeat 0 -37px; }
+
+                a.home_mob
+                {
+                    float: right;
+                    margin: 8px 25px 0 0;
+                }
+            }
+
+            ul.drop
+            {
+                background: #e75a40;
+                border-top: solid 1px #f2f2f3;
+                border-bottom: solid 1px #c3361c;
+                float: left;
+                height: initial;
+                margin: 0;
+                padding: 0 !important;
+                width: 100%;
+                list-style: none;
+
+                li
+                {
+                    border-top: solid 1px #c3361c;
+                    float: left;
+                    height: 60px;
+                    width: 49.9%;
+
+                    a
+                    {
+                        float: left;
+                        width: 89.9%;
+                        height: 100%;
+                        line-height: 60px;
+                        padding: 0 5.1%;
+
+                        color: #f7f7f7;
+                        font-family: "Roboto", Arial, Verdana, sans-serif;
+                        font-size: 20px;
+                        font-weight: 300;
+                    }
+
+                    a:hover { background: #c3361c; }
+                }
+
+                li:nth-child(1),
+                li:nth-child(3),
+                li:nth-child(5)
+                { border-right: solid 1px #c3361c; }
+            }
+
+            section.third
+            {
+                background: #f2f2f3 !important;
+                display: block;
+                padding: 0;
+                padding-top: 40px;
+
+                article
+                {
+                    p { display: none; }
+
+                    ul
+                    {
+                        height: 100% !important;
+                        border-bottom: solid 1px #dadbdd;
+
+                        li
+                        {
+                            background: url(../image/mobile/servicos.jpg) no-repeat !important;
+                            border-top: solid 1px #dadbdd;
+                            float: left;
+                            height: initial !important;
+                            width: 49.9% !important;
+                            padding: 5.5% 0;
+                            margin: 0 !important;
+                        }
+
+                        li:nth-child(1),
+                        li:nth-child(3),
+                        li:nth-child(5),
+                        li:nth-child(7)
+                        { border-right: solid 1px #dadbdd; }
+                    }
+                }
+            }
+        }
+    }
+
+    @media (max-width: 499px) {
+        body { display: none; }
+    }
+
+    @media (min-width: 1000px) {
+        body
+        {
+            header.mobile_section,
+            nav.mobile_nav
+            {
+                display: none;
+            }
+        }
+    }

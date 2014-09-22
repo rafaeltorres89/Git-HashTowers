@@ -1,9 +1,14 @@
 $(function(){
+    //Esconder
+    $('#comment, ul.drop, .our_team, #content').hide();
+
+    //Declaração de variáveis
     var nav = $('#nav');
     var second = $('.second');
     var more_project = $('.more-project');
     var offset = nav.offset().top;
 
+    //Menu fixado no topo
     $(document).on('scroll', function () {
         if (offset <= $(window).scrollTop()) {
             nav.addClass('fixar opacity_nav');
@@ -16,6 +21,7 @@ $(function(){
         }
     });
 
+    //Ancora
     $.fn.ancora = function(){
         $('body').animate({scrollTop:$(this).offset().top});
     }
@@ -30,13 +36,24 @@ $(function(){
         return false;
     });
 
-    $('.our_team').hide();
-
-    $('a.team').click(function(event){
+    //Veja nosso Time
+    $('a.team').click(function(event) {
         event.preventDefault();
         $(".our_team").toggle("slow");
     });
 
-    //Bloco de comentário
-    $('#comment').hide();
+    //Menu Mobile
+    $('.plus_mob').click(function(event) {
+        event.preventDefault();
+        $("ul.drop").toggle("slow");
+    });
+
+    //Modal
+    $('.send').click(function() {
+        $('#content').fadeIn();
+    });
+
+    $('.btn_modal').click(function() {
+        $('#content').fadeOut();
+    });
 });

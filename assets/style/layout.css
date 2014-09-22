@@ -19,6 +19,149 @@
 */
 /* Media Queries
 ----------------------------------------------------------------------- */
+/* Mobile 999px
+----------------------------------------------------------------------- */
+@media (min-width: 500px) and (max-width: 999px) {
+  body section,
+  body nav.main {
+    display: none;
+  }
+  body section article,
+  body nav.main article {
+    width: 100% !important;
+  }
+  body header.mobile_section {
+    float: left;
+    background: url(../image/mobile/back_image.jpg) no-repeat;
+    background-size: cover;
+    display: block;
+    padding: 10% 0 !important;
+  }
+  body header.mobile_section article {
+    width: 100%;
+  }
+  body header.mobile_section article h1 {
+    background: url(../image/sprite.png) no-repeat 0 0;
+    float: none;
+    height: 342px;
+    width: 378px;
+    margin: 0 auto;
+  }
+  body header.mobile_section article ul.sm {
+    float: none;
+    margin: 0 auto;
+    margin-top: 9.5%;
+  }
+  body nav.mobile_nav {
+    position: relative;
+    background: #292b29;
+    border-top: solid 1px #313131;
+    border-bottom: solid 1px #313131;
+    height: 37px;
+    padding: 1.6% 0 !important;
+  }
+  body nav.mobile_nav .plus_mob {
+    float: left;
+    background: url(../image/mobile/sprite_mob.jpg) no-repeat 0 0;
+    height: 37px;
+    width: 37px;
+    margin: 0 0 0 25px;
+    cursor: pointer;
+  }
+  body nav.mobile_nav .plus_mob p {
+    text-transform: uppercase;
+    margin: 7px 0 0 45px;
+    color: #E75A40;
+    font-family: "Roboto", Arial, Verdana, sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+  }
+  body nav.mobile_nav .plus_mob p:hover {
+    color: #E32666;
+  }
+  body nav.mobile_nav .plus_mob:hover {
+    background: url(../image/mobile/sprite_mob.jpg) no-repeat 0 -37px;
+  }
+  body nav.mobile_nav a.home_mob {
+    float: right;
+    margin: 8px 25px 0 0;
+  }
+  body ul.drop {
+    background: #e75a40;
+    border-top: solid 1px #f2f2f3;
+    border-bottom: solid 1px #c3361c;
+    float: left;
+    height: initial;
+    margin: 0;
+    padding: 0 !important;
+    width: 100%;
+    list-style: none;
+  }
+  body ul.drop li {
+    border-top: solid 1px #c3361c;
+    float: left;
+    height: 60px;
+    width: 49.9%;
+  }
+  body ul.drop li a {
+    float: left;
+    width: 89.9%;
+    height: 100%;
+    line-height: 60px;
+    padding: 0 5.1%;
+    color: #f7f7f7;
+    font-family: "Roboto", Arial, Verdana, sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+  }
+  body ul.drop li a:hover {
+    background: #c3361c;
+  }
+  body ul.drop li:nth-child(1),
+  body ul.drop li:nth-child(3),
+  body ul.drop li:nth-child(5) {
+    border-right: solid 1px #c3361c;
+  }
+  body section.third {
+    background: #f2f2f3 !important;
+    display: block;
+    padding: 0;
+    padding-top: 40px;
+  }
+  body section.third article p {
+    display: none;
+  }
+  body section.third article ul {
+    height: 100% !important;
+    border-bottom: solid 1px #dadbdd;
+  }
+  body section.third article ul li {
+    background: url(../image/mobile/servicos.jpg) no-repeat !important;
+    border-top: solid 1px #dadbdd;
+    float: left;
+    height: initial !important;
+    width: 49.9% !important;
+    padding: 5.5% 0;
+    margin: 0 !important;
+  }
+  body section.third article ul li:nth-child(1),
+  body section.third article ul li:nth-child(3),
+  body section.third article ul li:nth-child(5),
+  body section.third article ul li:nth-child(7) {
+    border-right: solid 1px #dadbdd;
+  }
+}
+@media (max-width: 499px) {
+  body {
+    display: none;
+  }
+}
+@media (min-width: 1000px) {
+  body header.mobile_section,
+  body nav.mobile_nav {
+    display: none;
+  }
+}
 @media (min-width: 990px) and (max-width: 1024px) {
   body section.first .boxCustomers .wrapper ul li.li_first {
     display: none;
@@ -235,224 +378,180 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
   from {
     background-position: -720px -344px;
   }
-
   to {
     background-position: -720px -516px;
   }
 }
-
 @keyframes bg_service-IOS {
   from {
     background-position: -720px -344px;
   }
-
   to {
     background-position: -720px -516px;
   }
 }
-
 @-webkit-keyframes bg_service-ANDROID {
   from {
     background-position: 0 0;
   }
-
   to {
     background-position: 0 -172px;
   }
 }
-
 @keyframes bg_service-ANDROID {
   from {
     background-position: 0 0;
   }
-
   to {
     background-position: 0 -172px;
   }
 }
-
 @-webkit-keyframes bg_service-WEB {
   from {
     background-position: -240px 0;
   }
-
   to {
     background-position: -240px -172px;
   }
 }
-
 @keyframes bg_service-WEB {
   from {
     background-position: -240px 0;
   }
-
   to {
     background-position: -240px -172px;
   }
 }
-
 @-webkit-keyframes bg_service-BACKEND {
   from {
     background-position: -480px 0;
   }
-
   to {
     background-position: -480px -172px;
   }
 }
-
 @keyframes bg_service-BACKEND {
   from {
     background-position: -480px 0;
   }
-
   to {
     background-position: -480px -172px;
   }
 }
-
 @-webkit-keyframes bg_service-UX {
   from {
     background-position: 0 -344px;
   }
-
   to {
     background-position: 0 -516px;
   }
 }
-
 @keyframes bg_service-UX {
   from {
     background-position: 0 -344px;
   }
-
   to {
     background-position: 0 -516px;
   }
 }
-
 @-webkit-keyframes bg_service-DESIGN {
   from {
     background-position: -240px -344px;
   }
-
   to {
     background-position: -240px -516px;
   }
 }
-
 @keyframes bg_service-DESIGN {
   from {
     background-position: -240px -344px;
   }
-
   to {
     background-position: -240px -516px;
   }
 }
-
 @-webkit-keyframes bg_service-CONSULTING {
   from {
     background-position: -480px -344px;
   }
-
   to {
     background-position: -480px -516px;
   }
 }
-
 @keyframes bg_service-CONSULTING {
   from {
     background-position: -480px -344px;
   }
-
   to {
     background-position: -480px -516px;
   }
 }
-
 @-webkit-keyframes bg_service-STARTUP {
   from {
     background-position: -720px 0;
   }
-
   to {
     background-position: -720px -172px;
   }
 }
-
 @keyframes bg_service-STARTUP {
   from {
     background-position: -720px 0;
   }
-
   to {
     background-position: -720px -172px;
   }
 }
-
 /* FadeIn
 ======================================================================= */
 @-webkit-keyframes fadeIn {
   0% {
     opacity: 0.2;
   }
-
   100% {
     opacity: 1;
   }
 }
-
 @-moz-keyframes fadeIn {
   0% {
     opacity: 0.2;
   }
-
   100% {
     opacity: 1;
   }
 }
-
 @-o-keyframes fadeIn {
   0% {
     opacity: 0.2;
   }
-
   100% {
     opacity: 1;
   }
 }
-
 @keyframes fadeIn {
   0% {
     opacity: 0.2;
   }
-
   100% {
     opacity: 1;
   }
 }
-
 @-webkit-keyframes backCollor {
   from {
     background: #000000;
   }
-
   to {
     background: #E32666;
   }
 }
-
 @keyframes backCollor {
   from {
     background: #000000;
   }
-
   to {
     background: #E32666;
   }
 }
-
 /*  --------------------------------------------------------------------------
     UI: Setup
     --------------------------------------------------------------------------
@@ -492,7 +591,7 @@ body nav ul li,
 body section ul li, body header ul li a,
 body footer ul li a,
 body nav ul li a,
-body section ul li a, body section.first article .content, body section.fourth section article .box_50, body section.fourth section article article, body section.fourth section article .our_team, body section.fourth section article .our_team h4, body section.fourth section article .our_team article, body section.fourth section article .our_team article .box_img, body section.sixth section form, body section.sixth section form input[type="text"], body section.sixth section form textarea, body section.sixth section form input.btn_form, body section.seventh section.clients_world article aside, body section.seventh footer section, body section.more-project article ul, body section.more-project article ul li, body footer.project article ul.sm {
+body section ul li a, body section.first article .content, body section.fourth section article .box_50, body section.fourth section article article, body section.fourth section article .our_team, body section.fourth section article .our_team h4, body section.fourth section article .our_team article, body section.fourth section article .our_team article .box_img, body section.sixth #content .modal h4, body section.sixth #content .modal p, body section.sixth section form, body section.sixth section form input[type="text"], body section.sixth section form textarea, body section.sixth section form input.btn_form, body section.seventh section.clients_world article aside, body section.seventh footer section, body section.more-project article ul, body section.more-project article ul li, body footer.project article ul.sm {
   float: left;
 }
 
@@ -510,7 +609,7 @@ body section article ul.sm, body nav.main article a.contact, body section.sevent
 #SHOW, body header article a.btn,
 body footer article a.btn,
 body nav article a.btn,
-body section article a.btn, body section.fourth section.transparent article .box_50 p span.font_light, body section.sixth section form input.btn_form, body section.more-project article ul li .img_project img.wide, body section.more-project article ul li:hover .btn_plus {
+body section article a.btn, body section.fourth section.transparent article .box_50 p span.font_light, body section.sixth #content .modal .btn_modal, body section.sixth section form input.btn_form, body section.more-project article ul li .img_project img.wide, body section.more-project article ul li:hover .btn_plus {
   display: block;
 }
 
@@ -554,18 +653,18 @@ body section article ul.sm li a, body section.third article ul li, body section.
 #TEXT-CENTER, body header article a.btn,
 body footer article a.btn,
 body nav article a.btn,
-body section article a.btn, body nav.main article ul li a, body nav.main article a.contact, body section.second article, body section.third article, body section.fourth section article, body section.fourth section.transparent article .box_50, body section.fifty section article, body section.sixth section article, body section.sixth section form input.btn_form, body section.seventh section.clients_world article, body section.seventh footer section article ul.ht_info li, body section.more-project article ul li, body section.more-project article ul li .img_project, body section.more-project article ul li:hover .btn_plus a {
+body section article a.btn, body nav.main article ul li a, body nav.main article a.contact, body section.second article, body section.third article, body section.fourth section article, body section.fourth section.transparent article .box_50, body section.fifty section article, body section.sixth #content .modal h4, body section.sixth #content .modal p, body section.sixth #content .modal .btn_modal, body section.sixth section article, body section.sixth section form input.btn_form, body section.seventh section.clients_world article, body section.seventh footer section article ul.ht_info li, body section.more-project article ul li, body section.more-project article ul li .img_project, body section.more-project article ul li:hover .btn_plus a {
   text-align: center;
 }
 
 #POSITION-ABSOLUTE, body .position, body header article a.btn,
 body footer article a.btn,
 body nav article a.btn,
-body section article a.btn, body section.first article, body section.first article .content h1, body section.sixth section p, body section.seventh footer section article p, body section.more-project article ul li .btn_plus {
+body section article a.btn, body section.first article, body section.first article .content h1, body section.sixth #content, body section.sixth #content .modal, body section.sixth #content .modal .btn_modal, body section.sixth section p, body section.seventh footer section article p, body section.more-project article ul li .btn_plus {
   position: absolute;
 }
 
-#POSITION-RELATIVE, body section.first, body section.first article .content, body section.fourth section article article, body section.sixth section article, body section.seventh section.clients_world article, body section.seventh footer section article, body section.more-project, body section.more-project article ul li {
+#POSITION-RELATIVE, body section.first, body section.first article .content, body section.fourth section article article, body section.sixth, body section.sixth section article, body section.seventh section.clients_world article, body section.seventh footer section article, body section.more-project, body section.more-project article ul li {
   position: relative;
 }
 
@@ -601,7 +700,7 @@ html {
 }
 
 body {
-  background: #fcfcfc;
+  background: #FCFCFC;
   color: #888888;
   font-family: "Roboto", Arial, Verdana, sans-serif;
   font-size: 14px;
@@ -700,7 +799,7 @@ body header article a.btn,
 body footer article a.btn,
 body nav article a.btn,
 body section article a.btn {
-  background: #fcfcfc;
+  background: #FCFCFC;
   border: solid 2px;
   font-family: "Roboto", Arial, Verdana, sans-serif;
   font-size: 20px;
@@ -728,9 +827,9 @@ body section article a.btn:hover {
   /* IE10+ */
   background: linear-gradient(45deg, #e52667 0%, #e75a41 100%);
   /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e52667', endColorstr='#e75a41',GradientType=1 );
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e52667', endColorstr='#e75a41',GradientType=1 );
   /* IE6-9 fallback on horizontal gradient */
-  color: #fcfcfc !important;
+  color: #FCFCFC !important;
 }
 body header article .language,
 body footer article .language,
@@ -758,7 +857,7 @@ body section article .language select {
   font-weight: lighter;
   background: transparent;
   border: 0;
-  color: #fcfcfc;
+  color: #FCFCFC;
   font-size: 14px;
   margin: -1px 0 0 5px;
   width: 155px;
@@ -882,14 +981,14 @@ body nav.main article ul li {
   height: 100%;
 }
 body nav.main article ul li a {
-  color: #fcfcfc;
+  color: #FCFCFC;
   line-height: 85px;
   padding: 0 30px;
 }
 body nav.main article ul li a:hover {
   -webkit-animation: backCollor 1s;
   animation: backCollor 1s;
-  background: #e32666;
+  background: #E32666;
 }
 body nav.main article ul li:last-child {
   border-right: solid 1px #363B3F;
@@ -909,7 +1008,7 @@ body nav.main article ul .selected {
   /* IE10+ */
   background: linear-gradient(45deg, #e52667 0%, #e75a41 100%);
   /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e52667', endColorstr='#e75a41',GradientType=1 );
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e52667', endColorstr='#e75a41',GradientType=1 );
   /* IE6-9 fallback on horizontal gradient */
 }
 body nav.main article a.contact {
@@ -927,16 +1026,16 @@ body nav.main article a.contact {
   /* IE10+ */
   background: linear-gradient(45deg, #e52667 0%, #e75a41 100%);
   /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e52667', endColorstr='#e75a41',GradientType=1 );
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e52667', endColorstr='#e75a41',GradientType=1 );
   /* IE6-9 fallback on horizontal gradient */
-  color: #fcfcfc;
+  color: #FCFCFC;
   height: 45px;
   line-height: 45px;
   margin-top: 20px;
   width: 120px;
 }
 body nav.main article a.contact:hover {
-  background: #e75a40;
+  background: #E75A40;
 }
 body section.first {
   background: url(../image/bg-first_1.jpg) no-repeat top center #4b5d83;
@@ -962,21 +1061,21 @@ body section.first article .content h1 {
   z-index: 1000;
 }
 body section.second {
-  background: #f7f8f8;
+  background: #F7F8F8;
 }
 body section.second article p {
-  color: #0a9ccd;
+  color: #0A9CCD;
   font-size: 40px;
 }
 body section.third {
-  background: url(../image/bg-second.jpg) repeat-x center #322e2d;
+  background: url(../image/bg-second.jpg) repeat-x center #322E2D;
 }
 body section.third article h2 {
-  color: #e75a40;
+  color: #E75A40;
   margin-bottom: 40px;
 }
 body section.third article p {
-  color: #fcfcfc;
+  color: #FCFCFC;
   font-size: 30px;
   margin-bottom: 30px;
   width: 100%;
@@ -1061,11 +1160,11 @@ body section.fourth {
   padding: 0;
 }
 body section.fourth section {
-  background: #fcfcfc;
+  background: #FCFCFC;
   height: initial;
 }
 body section.fourth section article h2 {
-  color: #e32666;
+  color: #E32666;
   margin-bottom: 70px;
 }
 body section.fourth section article .box_50 {
@@ -1083,8 +1182,8 @@ body section.fourth section article article {
   margin: 35px 0 50px;
 }
 body section.fourth section article article a.btn {
-  border-color: #e32666;
-  color: #e32666;
+  border-color: #E32666;
+  color: #E32666;
   left: 50%;
   margin-left: -100px;
 }
@@ -1097,7 +1196,7 @@ body section.fourth section article .our_team {
   text-align: left;
 }
 body section.fourth section article .our_team h4 {
-  color: #0a9ccd;
+  color: #0A9CCD;
   font-family: "Roboto", Arial, Verdana, sans-serif;
   font-size: 25px;
   font-weight: 300;
@@ -1112,7 +1211,7 @@ body section.fourth section article .our_team article {
   text-align: left;
 }
 body section.fourth section article .our_team article .box_img {
-  background: #fcfcfc;
+  background: #FCFCFC;
   border: solid 10px #f2f2f2;
   height: 160px;
   margin-right: 20px;
@@ -1124,7 +1223,7 @@ body section.fourth section article .our_team article .box_img img {
   width: 160px;
 }
 body section.fourth section article .our_team article p span {
-  color: #e32666;
+  color: #E32666;
   font-size: 16px;
   font-weight: 300;
 }
@@ -1133,7 +1232,7 @@ body section.fourth section article .our_team article p strong {
   font-size: 12px;
 }
 body section.fourth section article .our_team article p a {
-  color: #0a9ccd;
+  color: #0A9CCD;
   font-size: 14px;
   text-decoration: underline;
 }
@@ -1150,11 +1249,11 @@ body section.fourth section.transparent article .box_50 {
   width: 33.3%;
 }
 body section.fourth section.transparent article .box_50 p {
-  color: #fcfcfc;
+  color: #FCFCFC;
   font-size: 30px;
 }
 body section.fourth section.transparent article .box_50 p span.pink {
-  color: #e32666;
+  color: #E32666;
 }
 body section.fourth section.transparent article .box_50 p span.pHundred {
   font-size: 100px;
@@ -1165,14 +1264,14 @@ body section.fourth section.transparent article .box_50 p span.font_light {
   line-height: 22px;
 }
 body section.fourth section.projects article h2 {
-  color: #e75a40;
+  color: #E75A40;
 }
 body section.fourth section.projects article p {
   font-size: 30px;
 }
 body section.fourth section.projects article article a.btn {
-  border-color: #e75a40;
-  color: #e75a40;
+  border-color: #E75A40;
+  color: #E75A40;
 }
 body section.fourth section.block_work {
   background: #282928;
@@ -1257,10 +1356,10 @@ body section.fifty .position {
   margin-top: -85px;
 }
 body section.fifty section {
-  background: #e75a40;
+  background: #E75A40;
 }
 body section.fifty section article h2 {
-  color: #fcfcfc;
+  color: #FCFCFC;
   margin-bottom: 40px;
 }
 body section.fifty section article ul {
@@ -1268,7 +1367,7 @@ body section.fifty section article ul {
   margin-bottom: 40px;
 }
 body section.fifty section article ul li {
-  background: #fcfcfc;
+  background: #FCFCFC;
   height: 140px;
   margin: 0 10px 10px 0;
   line-height: 140px;
@@ -1329,7 +1428,7 @@ body section.fifty section article ul li.winke:hover {
   background-position: 0 -140px;
 }
 body section.fifty section article p {
-  color: #fcfcfc;
+  color: #FCFCFC;
   font-size: 20px;
   margin: 0 auto;
   width: 750px;
@@ -1341,11 +1440,108 @@ body section.sixth {
 body section.sixth .position {
   margin-top: -85px;
 }
+body section.sixth #content {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background: #e52667;
+  /* Old browsers */
+  background: -moz-linear-gradient(45deg, #e52667 0%, #e75a41 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left bottom, right top, color-stop(0%, #e52667), color-stop(100%, #e75a41));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(45deg, #e52667 0%, #e75a41 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(45deg, #e52667 0%, #e75a41 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(45deg, #e52667 0%, #e75a41 100%);
+  /* IE10+ */
+  background: linear-gradient(45deg, #e52667 0%, #e75a41 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e52667', endColorstr='#e75a41',GradientType=1 );
+  /* IE6-9 fallback on horizontal gradient */
+  opacity: 0.90;
+  -moz-opacity: 0.90;
+  filter: alpha(opacity=90);
+  z-index: 5000;
+}
+body section.sixth #content .modal {
+  background: #FFFFFF;
+  border-radius: 5px;
+  height: 290px;
+  width: 420px;
+  margin: -145px 0 0 -210px;
+  left: 50%;
+  top: 50%;
+  box-shadow: 0px 1px 8px #972145;
+}
+body section.sixth #content .modal h4 {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background: #F7f7f7;
+  border-bottom: solid 1px #e7e7e7;
+  color: #E32666;
+  height: 60px;
+  font-family: "Roboto", Arial, Verdana, sans-serif;
+  font-size: 30px;
+  font-weight: 300;
+  line-height: 60px;
+  margin: 0;
+  margin-top: 3px;
+}
+body section.sixth #content .modal p {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  color: #888888;
+  font-family: "Roboto", Arial, Verdana, sans-serif;
+  font-size: 20px;
+  font-weight: 100;
+  line-height: 25px;
+  margin: 0;
+  height: initial;
+  margin-top: 50px;
+}
+body section.sixth #content .modal .btn_modal {
+  background: #e52667;
+  /* Old browsers */
+  background: -moz-linear-gradient(45deg, #e52667 0%, #e75a41 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left bottom, right top, color-stop(0%, #e52667), color-stop(100%, #e75a41));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(45deg, #e52667 0%, #e75a41 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(45deg, #e52667 0%, #e75a41 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(45deg, #e52667 0%, #e75a41 100%);
+  /* IE10+ */
+  background: linear-gradient(45deg, #e52667 0%, #e75a41 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e52667', endColorstr='#e75a41',GradientType=1 );
+  /* IE6-9 fallback on horizontal gradient */
+  border-radius: 5px;
+  color: #FCFCFC !important;
+  cursor: pointer;
+  font-family: "Roboto", Arial, Verdana, sans-serif;
+  font-size: 20px;
+  font-weight: 100;
+  height: 50px;
+  line-height: 50px;
+  text-transform: uppercase;
+  width: 200px;
+  margin: 0 0 50px -100px;
+  left: 50%;
+  bottom: 0%;
+}
 body section.sixth section {
   background: #282928;
 }
 body section.sixth section article h2 {
-  color: #e75a40;
+  color: #E75A40;
   margin-bottom: 40px;
 }
 body section.sixth section form {
@@ -1361,8 +1557,8 @@ body section.sixth section form input[type="text"] {
   font-weight: lighter;
   background: none;
   border: none;
-  border-bottom: solid 1px #e75a40;
-  color: #e75a40;
+  border-bottom: solid 1px #E75A40;
+  color: #E75A40;
   height: 31px;
   font-size: 30px;
   margin-bottom: 50px;
@@ -1370,7 +1566,7 @@ body section.sixth section form input[type="text"] {
   width: 560px;
 }
 body section.sixth section form input.mensage::-webkit-input-placeholder {
-  color: #e75a40;
+  color: #E75A40;
 }
 body section.sixth section form textarea {
   font-family: "Open Sans", Arial, Verdana;
@@ -1378,8 +1574,8 @@ body section.sixth section form textarea {
   font-weight: lighter;
   background: none;
   border: none;
-  border-bottom: solid 1px #e75a40;
-  color: #e75a40;
+  border-bottom: solid 1px #E75A40;
+  color: #E75A40;
   font-size: 30px;
   margin-bottom: 50px;
   min-height: 150px;
@@ -1389,12 +1585,12 @@ body section.sixth section form textarea {
   padding-left: 20px;
 }
 body section.sixth section form textarea.mensage::-webkit-input-placeholder {
-  color: #e75a40;
+  color: #E75A40;
 }
 body section.sixth section form input.btn_form {
   background: none;
-  border: solid 2px #e75a40;
-  color: #e75a40;
+  border: solid 2px #E75A40;
+  color: #E75A40;
   cursor: pointer;
   font-family: "Roboto", Arial, Verdana, sans-serif;
   font-size: 20px;
@@ -1420,22 +1616,22 @@ body section.sixth section form input.btn_form:hover {
   /* IE10+ */
   background: linear-gradient(45deg, #e52667 0%, #e75a41 100%);
   /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e52667', endColorstr='#e75a41',GradientType=1 );
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e52667', endColorstr='#e75a41',GradientType=1 );
   /* IE6-9 fallback on horizontal gradient */
-  color: #fcfcfc !important;
+  color: #FCFCFC !important;
 }
 body section.sixth section p {
   right: 0;
-  color: #0a9ccd;
+  color: #0A9CCD;
   font-size: 16px;
   text-align: right;
 }
 body section.sixth section p a {
-  color: #0a9ccd;
+  color: #0A9CCD;
   text-decoration: none;
 }
 body section.sixth section p a:hover {
-  color: #e32666;
+  color: #E32666;
   text-decoration: underline;
 }
 body section.seventh {
@@ -1443,7 +1639,7 @@ body section.seventh {
   padding: 0;
 }
 body section.seventh section.clients_world {
-  background: #fcfcfc;
+  background: #FCFCFC;
 }
 body section.seventh section.clients_world article h2 {
   color: #485673;
@@ -1469,7 +1665,7 @@ body section.seventh footer section article ul.ht_info {
   width: 410px;
 }
 body section.seventh footer section article ul.ht_info li {
-  color: #e75a40;
+  color: #E75A40;
   font-family: "Roboto", Arial, Verdana, sans-serif;
   font-size: 20px;
   font-weight: 300;
@@ -1524,7 +1720,7 @@ body section.seventh footer section article .select_foot {
   margin: 100px 0 0 40px;
 }
 body section.seventh footer section article p {
-  color: #fcfcfc;
+  color: #FCFCFC;
   font-size: 13px;
   right: 0;
   top: 172px;
@@ -1555,7 +1751,7 @@ body section.more-project article ul li {
   padding: 30px;
 }
 body section.more-project article ul li p {
-  color: #e75a40;
+  color: #E75A40;
   font-family: "Roboto", Arial, Verdana, sans-serif;
   font-size: 40px;
   font-weight: 700;
@@ -1593,7 +1789,7 @@ body section.more-project article ul li:hover {
   /* IE10+ */
   background: linear-gradient(45deg, #e52667 0%, #e75a41 100%);
   /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e52667', endColorstr='#e75a41',GradientType=1 );
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e52667', endColorstr='#e75a41',GradientType=1 );
   /* IE6-9 fallback on horizontal gradient */
   opacity: 0.90;
   -moz-opacity: 0.90;
@@ -1610,7 +1806,7 @@ body section.more-project article ul li:hover .img_project {
   filter: alpha(opacity=20);
 }
 body section.more-project article ul li:hover .btn_plus a {
-  background: #fcfcfc;
+  background: #FCFCFC;
   border-radius: 3px;
   color: #ca3d31;
   font-family: "Roboto", Arial, Verdana, sans-serif;
@@ -1631,10 +1827,10 @@ body section.more-project article ul li:hover .btn_plus a img {
   margin-right: 5px;
 }
 body section.more-project article ul li:hover .btn_plus a:hover {
-  background: #322e2d;
+  background: #322E2D;
 }
 body footer.project {
-  background: #e32666;
+  background: #E32666;
   padding: 40px 0;
   margin-top: 50px;
 }
@@ -1642,7 +1838,7 @@ body footer.project article ul.sm {
   margin-top: 0;
 }
 body footer.project article p {
-  color: #fcfcfc;
+  color: #FCFCFC;
   font-size: 13px;
   right: 0;
   top: 172px;

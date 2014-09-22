@@ -15,7 +15,7 @@ $assunto_auto = "$nome, recebemos sua mensagem com sucesso!";//Assunto da Auto R
 $website =  "HashTowers Brasil";//Nome do Website
 $url_website = "www.hashtowers.com";//Url do Website
 $nome_webmaster = "Equipe";//Nome do Webmaster do site
-$mensagem_auto = "Olá $nome!\n\nObrigado por entrar em contato conosco!\nO mais breve possivel estaremos respondendo sua mensagem!!!\n\n$nome_webmaster $website\n$url_website";
+$mensagem_auto = "Olá $nome!\n\nObrigado por entrar em contato conosco!\nO mais breve possível estaremos respondendo sua mensagem!!!\n\n$nome_webmaster $website\n$url_website";
 //$assunto_auto = "Recebemos sua mensagem";
 
 // Aqui você observa os dados que serão enviados!!!
@@ -25,7 +25,7 @@ $mensagem .= "Nome: $nome\n";//Nome do Contato
 $mensagem .= "E-mail: $email\n";//Nome do Contato
 // $mensagem .= "Assunto: $assunto_msg\n";//Assunto do Contato
 $mensagem .= "Assunto: Contato pelo site!\n";//Assunto do Contato
-$mensagem .= "Mensagem: $contato";//Mensagem Enviada do Contato
+$mensagem .= "Mensagem: \n$contato";//Mensagem Enviada do Contato
 
 //não modifique esta linha, pois é ela que envia a mensagem!!!
 @mail($mail, $assunto, $mensagem, "From: $email");
@@ -33,6 +33,6 @@ $mensagem .= "Mensagem: $contato";//Mensagem Enviada do Contato
 //não modifique esta linha, pois é ela que envia a auto_resposta!!!
 @mail($email, $assunto_auto, $mensagem_auto, "From: $mail");
 
-header("Location:./ok/index.html");
+// header("Location:./ok/");
 
 ?>

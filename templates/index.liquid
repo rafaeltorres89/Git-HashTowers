@@ -1,5 +1,25 @@
 {% block scripts_header %}
 <script src="http://code.angularjs.org/1.0.1/angular-1.0.1.min.js"></script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script type="text/javascript">
+	jQuery(document).ready(function(){
+		jQuery('#ajax_form').submit(function(){
+			var dados = jQuery(this).serialize();
+
+			jQuery.ajax({
+				type: "POST",
+				url: "index.php",
+				data: dados,
+				success: function(data)
+				{
+        			$('#content').fadeIn();
+				}
+			});
+
+			return false;
+		});
+	});
+</script>
 {% endblock %}
 
 {% block scripts %}
@@ -8,7 +28,7 @@
 
 {% block content %}
     <section class="first" id="home">
-    	<article>
+        <article>
             <div class="content">
                 <div class="language">
                     <div class="ico"></div>
@@ -20,7 +40,7 @@
                 {% include "h1" %}
                 {% include "socialmedia" %}
             </div>
-    	</article>
+        </article>
         <div class="boxCustomers">
             <div class="wrapper">
                 <ul>
@@ -37,6 +57,14 @@
             </div>
         </div>
     </section>
+    <header class="mobile_section">
+        <article>
+            {% include "h1" %}
+            {% include "socialmedia" %}
+        </article>
+    </header>
+
+    <!-- Navegação Início -->
     <nav class="main" id="nav">
         <article>
             <ul>
@@ -50,14 +78,31 @@
             <a href="#contact" title="" class="contact">contact</a>
         </article>
     </nav>
+
+    <nav class="mobile_nav" id="nav">
+        <div class="plus_mob">
+            <p>menu</p>
+        </div>
+        <a href="" title="" class="home_mob"><img src="../assets/image/home.png" alt="" border="0"/></a>
+    </nav>
+    <ul class="drop">
+        <li><a href="" title="">service</a></li>
+        <li><a href="" title="">clients</a></li>
+        <li><a href="" title="">about us</a></li>
+        <li><a href="" title="">contact</a></li>
+        <li><a href="" title="">jobs</a></li>
+        <li><a href="" title="">and more</a></li>
+    </ul>
+    <!-- Navegação Fim -->
+
     <section class="second">
-    	<article>
+        <article>
             <p>we are a space where<br>engineers works under one roof<br>with designers & thinkers</p>
-    	</article>
+        </article>
     </section>
     <section class="third">
         <div class="position" id="service"></div>
-    	<article>
+        <article>
             <h2>services</h2>
             <p>we cover anything that is needed for your digital presence</p>
             <ul>
@@ -70,7 +115,7 @@
                 <li>CONSULTING</li>
                 <li>STARTUP</li>
             </ul>
-    	</article>
+        </article>
     </section>
     <section class="fourth">
         <section>
@@ -229,18 +274,65 @@
         </section>
         <section class="sixth">
             <div class="position" id="contact"></div>
+
+            <div id="content">
+                <div class="modal">
+                    <h4>Thanks!</h4>
+                    <p>Sua mensagem foi enviada<br>com sucesso!!!</p>
+                    <div class="btn_modal">Fechar</div>
+                </div>
+            </div>
+
             <section class="opacity contact">
                 <article>
                     <h2>hello {{ nome }}!</h2>
-                    <form name="form" method="post" action="envia.php">
-                        <input type="text" value="name" ng-model="nome" name="nome" class="mensage" maxlength="1000" placeholder="nome" onfocus="cleanit(this); refresh_nu()">
+                    <?php
+
+					// Aqui ficam os dados do formulário que serão enviados!!!
+					
+					$nome = $_POST["nome"];//Campo Nome do Formulário
+					$email = $_POST["email"];//Campo E-mail do Formulário
+					// $assunto_msg = $_POST["assunto_msg"];//Campo Mensagem do Formulário
+					$contato = $_POST["contato"];//Campo Contato do Formulário
+					
+					// Aqui ficam os dados do seu e-mail e da autoresposta!!!
+					
+					$assunto = "Formulário"; //Assunto do e-mail q vai chegar na sua caixa de mensagem
+					$mail = "hello@hashtowers.com"; //E-mail que você gostaria de receber os resultados do formulário
+					$assunto_auto = "$nome, recebemos sua mensagem com sucesso!";//Assunto da Auto Resposta
+					$website =  "HashTowers Brasil";//Nome do Website
+					$url_website = "www.hashtowers.com";//Url do Website
+					$nome_webmaster = "Equipe";//Nome do Webmaster do site
+					$mensagem_auto = "Olá $nome!\n\nObrigado por entrar em contato conosco!\nO mais breve possível estaremos respondendo sua mensagem!!!\n\n$nome_webmaster $website\n$url_website";
+					//$assunto_auto = "Recebemos sua mensagem";
+					
+					// Aqui você observa os dados que serão enviados!!!
+					
+					$mensagem = "$assunto enviado por $nome no $website:\n\n";//Inicio da Mensagem enviada!
+					$mensagem .= "Nome: $nome\n";//Nome do Contato
+					$mensagem .= "E-mail: $email\n";//Nome do Contato
+					// $mensagem .= "Assunto: $assunto_msg\n";//Assunto do Contato
+					$mensagem .= "Assunto: Contato pelo site!\n";//Assunto do Contato
+					$mensagem .= "Mensagem: \n$contato";//Mensagem Enviada do Contato
+					
+					//não modifique esta linha, pois é ela que envia a mensagem!!!
+					@mail($mail, $assunto, $mensagem, "From: $email");
+					
+					//não modifique esta linha, pois é ela que envia a auto_resposta!!!
+					@mail($email, $assunto_auto, $mensagem_auto, "From: $mail");
+					
+					// header("Location:./ok/");
+					
+					?>
+                    <form name="form" method="post" action="index.php" id="ajax_form">
+                        <input type="text" value="nome" ng-model="nome" name="nome" class="mensage" maxlength="1000" placeholder="nome" onfocus="cleanit(this); refresh_nu()">
                         <input type="text" value="email" ng-model="email" name="email" class="mensage" maxlength="1000" placeholder="email" onfocus="cleanit(this); refresh_nu()" onBlur="ValidaEmail();">
                         <textarea name="contato" value="mensage" class="mensage" maxlength="1000" placeholder="mensage" onfocus="cleanit(this); refresh_nu()"></textarea>
-                        <input class="btn_form" name="Enviar" type="submit" value="more">
+                        <input class="btn_form send" name="Enviar" type="submit" value="send">
                         <input class="btn_form" name="Limpar" type="reset" value="clean">
                     </form>
                     <p>
-                        give us a call <strong>+55 11 991 065 485</strong><br>
+                        give us a call <strong>+55 11 96628 1322</strong><br>
                         direct email <a href="" title="">hello@hashtowers.com</a>
                     </p>
                 </article>
